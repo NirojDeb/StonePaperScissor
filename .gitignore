@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+/www
+platforms
 
 /tests/e2e/reports/
 selenium-debug.log
@@ -22,3 +24,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+cordova/index.html
+cordova/www
+cordova/plugins
+cordova/platforms
+cordova/package.json
+cordova/package-lock.json
