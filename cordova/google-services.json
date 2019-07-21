@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "330723350497",
+    "firebase_url": "https://gsocialgo-27b90.firebaseio.com",
+    "project_id": "gsocialgo-27b90",
+    "storage_bucket": "gsocialgo-27b90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330723350497:android:ed04748f8e92d089",
+        "android_client_info": {
+          "package_name": "com.sps.stonepaperscissor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330723350497-umc478t3nadatp67546nf1nuulqfl0ko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkZMRsDGi3xo0xwKbDge_lsebHSpvjO3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330723350497-umc478t3nadatp67546nf1nuulqfl0ko.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "330723350497-11pls29edqls5ovs3rd8fjne737pnfsf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "9VDCD83Z2R.com.sps.stonepaperscissor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
