@@ -221,12 +221,15 @@ export default {
     moveNav() {
       if (this.$route.name === 'Dashboard.Articles') {
         this.$nextTick(() => {
-          const target = this.$refs[!this.$route.query.nav ? 'editor-pick-link' : 'feed-link'].$el;
-          const width = target.scrollWidth;
+          const ref = this.$refs[!this.$route.query.nav ? 'editor-pick-link' : 'feed-link'];
+          const target = ref ? ref.$el : '';
+          if(target!= '') {
+          const width = target.scrollWidth ;
           const posLeft = target.offsetLeft;
           const slider = this.$refs.sliderUnderline;
           slider.style.width = `${width}px`;
           slider.style.left = `${posLeft}px`;
+          }
         });
       }
     },

@@ -1,3 +1,5 @@
+import * as da from '../../assets/json/products.json';
+
 export default ({ $http }) => ({
   fetchAllArticles(context, obj) {
     const data = obj || {};
@@ -127,4 +129,46 @@ export default ({ $http }) => ({
         throw (err.response && err.response.data && err.response.data.message) || err;
       });
   },
+
+  // product detail
+
+  fetchAllProducts(context, obj) {
+    const data = obj || {};
+    const payload = {
+      $select: 'Title,Id,Modified,VideoURL,VideoURLAzure,SortStory,LongStory,ArticleCategory,ArticleLocation,TotalCommentsId,TotalLikesId,ArticleDate',
+      ...data,
+    };
+    // return $http
+    //   .get('../../assets/json/products.json', {
+    //     requestName: 'fetchAllProducts',
+    //   })
+    //   .then((res) => {
+    //     const response = res.data;
+    //     context.commit('setProductsInState', {
+    //       products: response.value,
+    //       count: response.itemsCount || response.value.length || 0,
+    //       $skiptoken: response.$skiptoken || '',
+    //     });
+    //     return response;
+    //   })
+    //   .catch((err) => {
+    //     context.dispatch('addToastNotifications', {
+    //       text: (err.response && err.response.data && err.response.data.message) || err.message,
+    //       timer: 4000,
+    //       type: 'error',
+    //     });
+    //     throw (err.response && err.response.data && err.response.data.message) || err;
+    //   });
+    // console.log(`data is: ${da}`);
+    context.commit('setProductsInState', {
+      products: da.products,
+      count: da.itemsCount || da.products.length || 0,
+      $skiptoken: 'yes',
+      articleSkipQuery: 'yes',
+      productSkipQuery: 'yes',
+      // $skiptoken: response.$skiptoken || '',
+    });
+    return da;
+  },
+
 });

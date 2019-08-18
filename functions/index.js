@@ -1,6 +1,14 @@
 const functions = require('firebase-functions');
 
+const { Issuer } = require('openid-client');
 const connectToDatabase = require('./db');
+
+// eslint-disable-next-line promise/catch-or-return
+Issuer.discover('https://accounts.google.com') // => Promise
+  // eslint-disable-next-line promise/always-return
+  .then(googleIssuer => {
+    console.log('Discovered issuer %s %O', googleIssuer.issuer, googleIssuer.metadata);
+  });
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions

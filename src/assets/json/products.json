@@ -1,0 +1,79 @@
+{
+    "products" : [
+        {
+            "business" : "SPS Basics",
+            "businessPage" : "SPS Basics",
+            "businessWebsite" : "SPS Basics",
+            "id" : 1,
+            "name" : "Pencil box",
+            "image" : "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+            "description" : " a pencil boc for kids",
+            "price" :  320,
+            "quanity" : 40,
+            "rating" : 4.5,
+            "feedbacks" : [],
+            "feedbacksCount": 23,
+            "greencash" : 32
+        },
+        {
+            "business" : "SPS Basics",
+            "businessPage" : "SPS Basics",
+            "businessWebsite" : "SPS Basics",
+            "id" : 2,
+            "name" : "Pencil box 2",
+            "image" : "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+            "description" : " a pencil boc for kids",
+            "price" :  320,
+            "quanity" : 40,
+            "rating" : 4.5,
+            "feedbacks" : [],
+            "feedbacksCount": 23,
+            "greencash" : 2
+        },
+        {
+            "business" : "SPS Basics",
+            "businessPage" : "SPS Basics",
+            "businessWebsite" : "SPS Basics",
+            "id" : 3,
+            "name" : "Pencil box 3",
+            "image" : "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+            "description" : " a pencil boc for kids",
+            "price" :  320,
+            "quanity" : 40,
+            "rating" : 4.5,
+            "feedbacks" : [],
+            "feedbacksCount": 23,
+            "greencash" : 3
+        },
+        {
+            "business" : "SPS Basics",
+            "businessPage" : "SPS Basics",
+            "businessWebsite" : "SPS Basics",
+            "id" : 4,
+            "name" : "Pencil box 4",
+            "image" : "../../assets/logo.png",
+            "description" : " a pencil boc for kids",
+            "price" :  320,
+            "quanity" : 40,
+            "rating" : 4.5,
+            "feedbacks" : [],
+            "feedbacksCount": 23,
+            "greencash" : 30
+        },
+        {
+            "business" : "SPS Basics",
+            "businessPage" : "SPS Basics",
+            "businessWebsite" : "SPS Basics",
+            "id" : 5,
+            "name" : "Pencil box 5",
+            "image" : "../../assets/logo.png",
+            "description" : " a pencil boc for kids",
+            "price" :  320,
+            "quanity" : 40,
+            "rating" : 4.5,
+            "feedbacks" : [],
+            "feedbacksCount": 23,
+            "greencash" : 30
+        }
+    ]
+}

@@ -78,8 +78,9 @@ export default {
     },
   },
   async beforeMount() {
+    console.log('dashboard');
     if (this.$route.name === 'DashboardRootPage') this.$router.replace({ name: 'Dashboard.Articles' });
-    await this.fetchUserPreferences();
+    // await this.fetchUserPreferences();
     this.renderReady = true;
   },
   methods: {

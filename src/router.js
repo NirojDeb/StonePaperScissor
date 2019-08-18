@@ -183,7 +183,7 @@ const routes = [
   {
     path: '/',
     name: 'RootPage',
-    redirect: '/login',
+    redirect: '/dashboard',
   },
 
   /* Auth Pages */
@@ -195,23 +195,13 @@ const routes = [
 
   /* Auth Pages */
   {
-    path: '/login',
+    path: '/dashboard',
     name: 'DashboardRootPage',
     component: DashboardRootPage,
     // name: 'Auth.LoginPage',
     // component: LoginPage,
     // meta: {
     //   redirectIfLoggedIn: true,
-    // },
-  },
-
-  /* Root Page */
-  {
-    path: '/dashboard',
-    name: 'DashboardRootPage',
-    component: DashboardRootPage,
-    // meta: {
-    //   requiresAuth: true,
     // },
     children: [
       {
@@ -245,7 +235,7 @@ const routes = [
         component: DashboardArticlesPage,
         meta: {
           saveScrollPos: true,
-          showHeader: true,
+          showHeader: false,
         },
       },
       {
@@ -334,13 +324,174 @@ const routes = [
         },
       },
       {
-        path: '/dashboard/account/it-assets',
-        name: 'Dashboard.ITAssets',
+        path: '/dashboard/account/experiences-history',
+        name: 'Dashboard.ExperiencesHistory',
         component: ITAssetsPage,
         meta: {
           showHeader: true,
           showBack: true,
-          title: 'IT Assets',
+          title: 'Experiences History',
+        },
+      },
+      {
+        path: '/dashboard/tools',
+        name: 'Dashboard.AllTools',
+        component: AllToolsPage,
+      },
+      {
+        path: '/dashboard/tools/popular',
+        name: 'Dashboard.PopularTools',
+        component: PopularToolsPage,
+      },
+      {
+        path: 'volunteering',
+        name: 'Dashboard.Volunteering',
+        component: VolunteeringPage,
+        meta: {
+          showHeader: true,
+          showBack: true,
+          title: 'Volunteering',
+        },
+      },
+    ],
+  },
+
+  /* Root Page */
+  {
+    path: '/dashboard',
+    name: 'DashboardRootPage',
+    component: DashboardRootPage,
+    // meta: {
+    //   requiresAuth: true,
+    // },
+    children: [
+      {
+        path: 'approvals',
+        name: 'Dashboard.Approvals',
+        component: DashboardApprovalPage,
+        meta: {
+          showHeader: false,
+          showBack: false,
+          title: 'Approval Requests',
+        },
+      },
+      {
+        path: 'search',
+        name: 'Dashboard.Search',
+        component: DashboardSearchPage,
+      },
+      {
+        path: 'categories',
+        name: 'Dashboard.Categories',
+        component: DashboardCategoriesPage,
+      },
+      {
+        path: 'categories/:categorySlug',
+        name: 'Dashboard.Category.Detail',
+        component: DashboardCategoryDetailPage,
+      },
+      {
+        path: 'articles',
+        name: 'Dashboard.Articles',
+        component: DashboardArticlesPage,
+        meta: {
+          saveScrollPos: true,
+          showHeader: false,
+        },
+      },
+      {
+        path: 'article/:articleId',
+        name: 'Dashboard.Article.Detail',
+        component: DashboardArticleDetailPage,
+        meta: {
+          saveScrollPos: true,
+          // showHeader: true,
+          showBack: true,
+        },
+      },
+      {
+        path: '/dashboard/communities',
+        name: 'Dashboard.AllCommunities',
+        component: AllCommunitiesPage,
+      },
+      {
+        path: '/dashboard/communities/popular',
+        name: 'Dashboard.PopularCommunities',
+        component: PopularCommunitiesPage,
+      },
+      {
+        path: 'documents',
+        name: 'Dashboard.Documents',
+        component: DocumentsPage,
+      },
+      {
+        path: '/dashboard/experiences',
+        name: 'Dashboard.Experiences',
+        component: ExperiencesPage,
+        meta: {
+          showHeader: true,
+          showBack: false,
+          title: 'Experiences',
+        },
+      },
+      {
+        path: '/dashboard/planet',
+        name: 'Dashboard.Planet',
+        component: PlanetPage,
+        meta: {
+          showHeader: true,
+          showBack: false,
+          title: 'Planet',
+        },
+      },
+      {
+        path: '/dashboard/account',
+        name: 'Dashboard.Account',
+        component: AccountPage,
+      },
+      {
+        path: '/dashboard/account/profile',
+        name: 'Dashboard.Profile',
+        component: ProfilePage,
+        meta: {
+          showHeader: true,
+          showBack: true,
+          title: 'Profile',
+        },
+      },
+      {
+        path: '/dashboard/account/team',
+        name: 'Dashboard.Team',
+        component: TeamPage,
+      },
+      {
+        path: '/dashboard/rewards',
+        name: 'Dashboard.Rewards',
+        component: RewardsPage,
+        meta: {
+          showHeader: true,
+          showBack: false,
+          title: 'Rewards',
+        },
+      },
+      {
+        path: '/dashboard/account/work-history',
+        name: 'Dashboard.WorkHistory',
+        component: WorkHistoryPage,
+        meta: {
+          showHeader: true,
+          showBack: true,
+          title: 'Work history',
+        },
+      },
+      {
+        path: '/dashboard/account/experiences-history',
+        name: 'Dashboard.ExperiencesHistory',
+        component: ITAssetsPage,
+        meta: {
+          showHeader: true,
+          showBack: true,
+          title: 'Experiences History',
         },
       },
       {

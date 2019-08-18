@@ -233,6 +233,7 @@ export default ({ $http, $vf }) => ({
   },
 
   async fetchUserPreferences(context) {
+    console.log('reac');
     const categoryPref = await $vf.getItem('categoryPref');
     return $http.get('/api/v1/account/preferences', {
       requestName: 'fetchUserPreferences',

@@ -30,7 +30,7 @@
           class="no-underline ml-12 block flex items-center leading-normal pt-3 py-2
           text-lg border-grey-lighter text-grey-darkest justify-between"
         >
-          {{ nav.name }}
+          {{ nav.name }} +i
           <i class="fa-chevron-right fas relative text-base text-grey-darker" style="top: -1px;" />
         </router-link>
       </div>

@@ -57,11 +57,11 @@ export default {
     ...mapActions(['fetchAllArticles']),
     fetchData() {
       if (!this.articleSkipQuery) {
-        this.fetchAllArticles();
+        // this.fetchAllArticles();
       } else {
-        this.fetchAllArticles({
-          $skiptoken: this.articleSkipQuery,
-        });
+        // this.fetchAllArticles({
+        //   $skiptoken: this.articleSkipQuery,
+        // });
       }
     },
   },

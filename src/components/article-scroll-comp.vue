@@ -6,7 +6,7 @@
       </p>
     </div>
 
-    <div v-else-if="articles.length > 0">
+    <div v-else-if="products.length > 0">
       <!-- <article-card
         v-for="article in articles"
         :key="article.Id"
@@ -17,30 +17,36 @@
         @likeEvent="articleLike"
         @unlikeEvent="unlikeArticle"
       /> -->
+      <product-card
+        v-for="product in products"
+        :key="product.id"
+        class="mb-6"
+        :screen-img-width="800"
+        :product="product"
+      >
+      </product-card>  
       <h1 v-if="categoryFullName" class="letter-spacing-05 mb-5 mt-1 text-xl text-black font-normal">
         Category: {{ categoryFullName }}
       </h1>
-      <article-card
-        v-for="article in articles"
-        :key="article.Id"
+      <!-- <product-card
+        v-for="product in products"
+        :key="product.id"
         class="mb-6"
         :screen-img-width="800"
-        :article="article"
-        :open-comment-modal="openCommentsModal"
-        @likeEvent="articleLike"
-        @unlikeEvent="unlikeArticle"
-      />
+        :product="product"
+      >
+      </product-card> -->
     </div>
 
-    <div v-else-if="!articles.length && categoryFullName && !(request.key === 'fetchAllArticles' && request.inProgress)" class="text-center m-10">
+    <div v-else-if="!products.length && categoryFullName && !(request.key === 'fetchAllArticles' && request.inProgress)" class="text-center m-10">
       <p class="leading-tight mx-auto text-2xl w-64">
-        There are no articles in {{ categoryFullName }} category.
+        There are no products in {{ categoryFullName }} category.
       </p>
     </div>
 
-    <div v-else-if="articles.length == 0 && totalArticlesCount > 0" class="text-center m-10">
+    <div v-else-if="products.length == 0 && totalProductsCount > 0" class="text-center m-10">
       <p class="leading-tight mx-auto text-2xl w-64">
-        There are no articles.
+        There are no products.
       </p>
     </div>
 
@@ -63,13 +69,24 @@
       <!-- eslint-enable -->
     </content-loader>
 
+<!-- product -->
     <mugen-scroll
+      v-if="productSkipQuery"
+      :handler="fetchData"
+      :should-handle="!(request.key === 'fetchAllArticles' && request.inProgress)"
+      class="flex items-center justify-center mb-4 mt-8 rotating-cube-spinner"
+    >
+      <!-- <img src="/img/loader.gif" width="40" alt="Loader Gif"> -->
+
+<!-- Article -->
+
+    <!-- <mugen-scroll
       v-if="articleSkipQuery"
       :handler="fetchData"
       :should-handle="!(request.key === 'fetchAllArticles' && request.inProgress)"
       class="flex items-center justify-center mb-4 mt-8 rotating-cube-spinner"
     >
-      <img src="/img/loader.gif" width="40" alt="Loader Gif">
+      <img src="/img/loader.gif" width="40" alt="Loader Gif"> -->
     </mugen-scroll>
 
     <modal ref="comments-modal-comp" name="comments-modal">
@@ -80,7 +97,7 @@
         </p>
       </div>
       <div v-else class="py-3">
-        <div v-for="comment in article.comments" :key="comment.Id" class="flex flex-col">
+        <!-- <div v-for="comment in article.comments" :key="comment.Id" class="flex flex-col">
           <div
             class="bg-orange-lightest w-3/4 inline-block mx-4 my-2"
             :class="[user.ohrId === comment.CommentBy ? 'comment-bubble-right ml-auto' : 'comment-bubble-left']"
@@ -94,7 +111,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div
@@ -149,26 +166,27 @@ import MugenScroll from 'vue-mugen-scroll';
 export default {
   name: 'ArticlesScroll',
   components: {
-    ArticleCard: () => import('@/components/article-card.vue'),
+    // ArticleCard: () => import('@/components/article-card.vue'),
     Modal: () => import('@/components/modal.vue'),
     ContentLoader,
     MugenScroll,
+    ProductCard: () => import('@/components/product-card.vue'),
   },
   props: {
-    articles: {
+    fetchData: {
+      type: Function,
+      required: true,
+    },
+    products: {
       type: Array,
       required: true,
     },
-    articleSkipQuery: {
+    productSkipQuery: {
       type: String,
       required: true,
     },
-    totalArticlesCount: {
+    totalProductsCount: {
       type: Number,
-      required: true,
-    },
-    fetchData: {
-      type: Function,
       required: true,
     },
   },
@@ -179,7 +197,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['request', 'screenImgWidth', 'article', 'user', 'categories']),
+    ...mapGetters(['request', 'screenImgWidth', 'user', 'categories']),
     categoryFullName() {
       const categoryObj = this.categories.find(category => category.slug === this.$route.query.category) || {};
       return categoryObj.name || '';
@@ -191,11 +209,11 @@ export default {
   },
   methods: {
     ...mapActions(['fetchArticleComments', 'articleLike', 'unlikeArticle', 'commentOnArticle']),
-    openCommentsModal(article) {
-      this.selectedArticleId = article.Id;
-      this.fetchArticleComments(article.Id);
-      this.$refs['comments-modal-comp'].$data.isOpen = true;
-    },
+    // openCommentsModal(article) {
+    //   this.selectedArticleId = article.Id;
+    //   this.fetchArticleComments(article.Id);
+    //   this.$refs['comments-modal-comp'].$data.isOpen = true;
+    // },
     async postCommentOnArticle() {
       try {
         await this.commentOnArticle({
