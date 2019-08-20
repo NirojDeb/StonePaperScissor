@@ -17,6 +17,13 @@ const LoginPage = () => {
   return import('@/views/desktop/auth-pages/login.vue');
 };
 
+const CampaignPage = () => {
+  if (isMobileOnly) {
+    return import('@/views/mobile/campaigns/himalayas-hero-honda-2019.vue');
+  }
+  return import('@/views/desktop/campaigns/himalayas-hero-honda-2019.vue');
+};
+
 /* Auth Pages */
 const DownloadPage = () => {
   if (isMobileOnly) {
@@ -192,7 +199,23 @@ const routes = [
     name: 'DownloadPage',
     component: DownloadPage,
   },
-
+  {
+    path: '/himalayas-hero-honda-2019',
+    name: 'CampaignRootPage',
+    component: CampaignPage,
+    children: [
+      {
+        path: 'approvals',
+        name: 'Campaign.HeroHondaHimalaya',
+        component: CampaignPage,
+        meta: {
+          showHeader: false,
+          showBack: false,
+          title: 'Hero Honda Himalayas',
+        },
+      },
+    ],
+  },
   /* Auth Pages */
   {
     path: '/dashboard',
@@ -354,6 +377,7 @@ const routes = [
         },
       },
     ],
+    
   },
 
   /* Root Page */

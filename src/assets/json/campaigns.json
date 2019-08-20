@@ -1,0 +1,21 @@
+{
+    "campaigns" : [
+        {
+            "name" : "HERO MTB HIMALAYA 2019",
+            "organizers" : [
+                { 
+                    "name": "Hero Cycles",
+                    "logo": ""
+                },
+                { 
+                    "name": "Growdiesel",
+                    "logo": ""
+                },
+                { 
+                    "name": "Young Engine",
+                    "logo": ""
+                }
+            ]
+        }
+    ]
+}

@@ -30,13 +30,13 @@
           class="no-underline ml-12 block flex items-center leading-normal pt-3 py-2
           text-lg border-grey-lighter text-grey-darkest justify-between"
         >
-          {{ nav.name }} +i
+          {{ nav.name }}
           <i class="fa-chevron-right fas relative text-base text-grey-darker" style="top: -1px;" />
         </router-link>
       </div>
     </div>
 
-    <h2 class="font-normal letter-spacing-05 mx-5 my-3 text-xs uppercase">
+    <!-- <h2 class="font-normal letter-spacing-05 mx-5 my-3 text-xs uppercase">
       Important links
     </h2>
     <div class="pr-6 bg-white">
@@ -54,7 +54,7 @@
           <i class="fa-chevron-right fas relative text-base text-grey-darker" style="top: -1px;" />
         </router-link>
       </div>
-    </div>
+    </div> -->
 
     <div class="pr-6 bg-white mt-8">
       <div class="relative">
@@ -70,9 +70,15 @@
       </div>
     </div>
 
-    <p class="font-normal letter-spacing-05 mx-5 my-3 mt-6 text-sm text-grey">
+    <p class="font-normal letter-spacing-05 mx-5 my-3 mt-6 text-sm text-black text-center">
+      SPS is an initiative of Growdiesel
+      <br>
+    </p>
+
+    <p class="font-normal letter-spacing-05 mx-5 my-3 mt-6 text-sm text-grey text-center">
       Version: {{ version }}
     </p>
+
   </section>
 </template>
 

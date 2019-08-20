@@ -1,0 +1,33 @@
+{
+    "companyDetail" : {
+        "name" : "Stone Pater Scissors",
+        "mission" : "",
+        "linkedin" : "",
+        "facebook" : "",
+        "google" : "",
+        "github" : "",
+    },
+    "team" : [
+        {
+            "name" : "Shrey Saxena",
+            "title" : "Co Founder",
+            "linkedin" : "",
+            "facebook" : "",
+            "google" : ""
+        },
+        {
+            "name" : "Aniket ",
+            "title" : "Co Founder",
+            "linkedin" : "",
+            "facebook" : "",
+            "google" : ""
+        },
+        {
+            "name" : "Aditya Kumar",
+            "title" : "Co Founder",
+            "linkedin" : "",
+            "facebook" : "",
+            "google" : ""
+        }
+    ]
+}

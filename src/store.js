@@ -22,6 +22,7 @@ import categoriesModule from '@/store/categories/categories-store';
 import communitiesModule from '@/store/communities/communities-store';
 import documentsModule from '@/store/documents/documents-store';
 import financialsModule from '@/store/financials/financials-store';
+import campaignsModule from '@/store/campaigns/campaigns-store';
 import toolsModule from '@/store/tools/tools-store';
 import deviceModule from '@/store/device-store';
 import navigationModule from '@/store/navigation-store';
@@ -42,6 +43,7 @@ export default new Vuex.Store({
   modules: {
     accounts: accountsModule(injectionObj),
     articles: articlesModule(injectionObj),
+    campaigns: articlesModule(campaignsModule),
     categories: categoriesModule(injectionObj),
     communities: communitiesModule(injectionObj),
     device: deviceModule(),
