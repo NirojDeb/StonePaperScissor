@@ -1,7 +1,7 @@
 <template>
 	<section class="leading-normal tracking-normal text-white">
     <!-- Nav Header -->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
 		<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 			<div class="pl-4 flex items-center">
 				<a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
@@ -21,14 +21,19 @@
 			</div>
 			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 				<ul class="list-reset lg:flex justify-end flex-1 items-center">
-					<li class="mr-3">	<a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+					<li class="mr-3">	<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
 					</li>
-					<li class="mr-3">	<a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">AboutUs</a>
+					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">AboutUs</a>
 					</li>
-					<li class="mr-3">	<a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Team</a>
+					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Team</a>
 					</li>
 				</ul>
-				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Volunteer</button>
+				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full
+         mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
+         <a class="text-blue no-underline hover:text-gray-800 hover:text-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
+           Volunteer
+           </a>
+        </button>
 			</div>
 		</div>
 		<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -354,7 +359,7 @@
 	</g>
 </svg>
 
-<section class="container mx-auto text-center py-6 mb-12 gradient">
+<section class="mx-auto text-center py-6 mb-12 gradient">
 
 	<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Himalayas Hero Cycles</h1>
 	<div class="w-full mb-4">	
@@ -363,7 +368,11 @@
 
 	<h3 class="my-4 text-3xl leading-tight">Sign up to volunteer in Himalaya!</h3>	
 
-	<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action!</button>
+	<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+    <a class="text-blue no-underline hover:text-gray-800 hover:text-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
+      Apply to Volunteer
+    </a>
+  </button>
 		
 </section>
 
@@ -439,7 +448,7 @@
         </div>
     </div>
 	
-	<p class="text-black text-center p-12">NGO initiative of Growdiesel</p>
+	<p class="text-blue text-center p-12">NGO initiative of Growdiesel</p>
 
 </footer>
 	</section>
