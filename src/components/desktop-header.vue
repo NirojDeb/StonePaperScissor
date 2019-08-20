@@ -4,11 +4,9 @@
     <nav
       class="header-navigation-cont z-10 headroom flex items-center justify-center"
       role="navigation"
-      aria-label="Global Navigation"
-      :class="{ 'headroom--unpinned' : scrolled && !showBack && !menuOpened, 'menu-opened' : menuOpened, 'nav-scroll-hide' : !hideNavScroll }"
       @scroll="handleScroll"
     >
-      <div v-if="showBack" class="back-cont fixed pin-x pin-t z-10">
+      <!-- <div v-if="showBack" class="back-cont fixed pin-x pin-t z-10">
         <button
           class="back-btn px-3 py-3 text-blue flex items-center leading-normal"
           @click.prevent="$router.back()"
@@ -16,7 +14,7 @@
           <i class="fa-chevron-left fas text-xl mr-1" />
           <span>Account</span>
         </button>
-      </div>
+      </div> -->
 
       <h4 v-if="showBack" class="text-grey-darkest letter-spacing-05 capitalize">
         {{ $route.meta.title || '' }}
@@ -147,7 +145,7 @@ import debounce from 'lodash.debounce';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  name: 'Header',
+  name: 'DesktopHeader',
   props: {
     showBack: {
       type: Boolean,

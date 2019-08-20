@@ -24,7 +24,7 @@
         :screen-img-width="800"
         :product="product"
       >
-      </product-card>  
+      </product-card>
       <h1 v-if="categoryFullName" class="letter-spacing-05 mb-5 mt-1 text-xl text-black font-normal">
         Category: {{ categoryFullName }}
       </h1>

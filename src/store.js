@@ -43,7 +43,7 @@ export default new Vuex.Store({
   modules: {
     accounts: accountsModule(injectionObj),
     articles: articlesModule(injectionObj),
-    campaigns: articlesModule(campaignsModule),
+    campaigns: campaignsModule(injectionObj),
     categories: categoriesModule(injectionObj),
     communities: communitiesModule(injectionObj),
     device: deviceModule(),

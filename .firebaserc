@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "stonepaper-scissor"
+    "default": "stonepaper-scissor",
+    "production": "sps-desktop"
   }
 }

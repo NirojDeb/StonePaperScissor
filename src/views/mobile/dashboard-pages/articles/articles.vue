@@ -15,7 +15,7 @@
     /> -->
 
     <!-- <div v-else class="text-center my-4 mx-3">
-      <i class="fa-frown-open far mb-3 text-5xl text-grey-dark" />  
+      <i class="fa-frown-open far mb-3 text-5xl text-grey-dark" />
       <h2 class="font-normal leading-loose letter-spacing-05 mx-6 text-black text-xl">
         No categories being followed.
       </h2>
@@ -108,8 +108,7 @@ export default {
         }
         if (this.categoryName) obj.$filter = `substringof('${this.categoryName}',ArticleCategory)`;
         // this.fetchAllArticles(obj);
-                this.fetchAllProducts();
-
+        this.fetchAllProducts();
       }
     },
   },

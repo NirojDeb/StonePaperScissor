@@ -5,7 +5,7 @@ import Axios from 'axios';
 Axios.defaults.headers.common.Accept = 'application/json';
 // Axios.defaults.headers.common.withCredentials = true;
 Axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-Axios.defaults.headers.common['Authorization'] = 'Adita';
+Axios.defaults.headers.common.Authorization = 'Adita';
 
 export default (Vue) => {
   Object.defineProperties(Vue.prototype, {

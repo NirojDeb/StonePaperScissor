@@ -190,7 +190,7 @@ const routes = [
   {
     path: '/',
     name: 'RootPage',
-    redirect: '/dashboard',
+    redirect: '/himalayas-hero-2019',
   },
 
   /* Auth Pages */
@@ -200,21 +200,26 @@ const routes = [
     component: DownloadPage,
   },
   {
-    path: '/himalayas-hero-honda-2019',
+    path: '/himalayas-hero-2019',
     name: 'CampaignRootPage',
     component: CampaignPage,
-    children: [
-      {
-        path: 'approvals',
-        name: 'Campaign.HeroHondaHimalaya',
-        component: CampaignPage,
-        meta: {
-          showHeader: false,
-          showBack: false,
-          title: 'Hero Honda Himalayas',
-        },
-      },
-    ],
+    meta: {
+      showHeader: true,
+      showBack: false,
+      title: 'Hero Honda Himalayas',
+    },
+    // children: [
+    //   {
+    //     path: 'approvals',
+    //     name: 'Campaign.HeroHondaHimalaya',
+    //     component: CampaignPage,
+    //     meta: {
+    //       showHeader: false,
+    //       showBack: false,
+    //       title: 'Hero Honda Himalayas',
+    //     },
+    //   },
+    // ],
   },
   /* Auth Pages */
   {
@@ -377,7 +382,7 @@ const routes = [
         },
       },
     ],
-    
+
   },
 
   /* Root Page */
