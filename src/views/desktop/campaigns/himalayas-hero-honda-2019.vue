@@ -1,6 +1,7 @@
 <template>
 	<section class="leading-normal tracking-normal text-white">
     <!-- Nav Header -->
+	<header>
     <nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
 		<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 			<div class="pl-4 flex items-center">
@@ -19,11 +20,12 @@
 					</svg>
 				</button>
 			</div>
+			
 			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 				<ul class="list-reset lg:flex justify-end flex-1 items-center">
 					<li class="mr-3">	<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
 					</li>
-					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">AboutUs</a>
+					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#"> </a>
 					</li>
 					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Team</a>
 					</li>
@@ -38,6 +40,7 @@
 		</div>
 		<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
+	</header>
     <!--Hero-->
 <div class="pt-24 gradient">
 
@@ -375,7 +378,6 @@
   </button>
 		
 </section>
-
 
 <!--Footer-->
 <footer class="bg-white">
