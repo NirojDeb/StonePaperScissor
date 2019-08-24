@@ -10,7 +10,7 @@
 					<svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
 						<rect x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)" />
 						<path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z " />
-					</svg>StonePaperScissors</a>
+					</svg>{{companyDetail.companyDetail.name}}</a>
 			</div>
 			<div class="block lg:hidden pr-4">
 				<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
@@ -23,19 +23,24 @@
 			
 			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 				<ul class="list-reset lg:flex justify-end flex-1 items-center">
-					<li class="mr-3">	<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
+					<li class="mr-12">	
+						<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">
+							Home
+						</a>
 					</li>
-					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#"> </a>
-					</li>
-					<li class="mr-3">	<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Team</a>
+					<li class="mr-12">	
+						<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
+							Team
+						</a>
 					</li>
 				</ul>
-				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full
-         mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
-         <a class="text-blue no-underline hover:text-gray-800 hover:text-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
-           Volunteer
-           </a>
-        </button>
+				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 
+				font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75">
+         			<a class="text-blue no-underline hover:text-gray-800 hover:text-underline" 
+						href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
+           				Partner With Us
+           			</a>
+       			</button>
 			</div>
 		</div>
 		<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -43,17 +48,21 @@
 	</header>
     <!--Hero-->
 <div class="pt-24 gradient">
-
 	<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 		<!--Left Col-->
 		<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-			<p class="uppercase tracking-loose w-full">What business are you?</p>
-			<h1 class="my-4 text-5xl font-bold leading-tight">Main Hero Message to sell yourself!</h1>
-			<p class="leading-normal text-2xl mb-8">Sub-hero message, not too long and not too short. Make it just right!</p>
-		
-			
-
-			<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Subscribe</button>
+			<p class="uppercase tracking-loose w-full">
+				{{companyDetail.companyDetail.objective}}
+			</p>
+			<h1 class="my-4 text-5xl font-bold leading-tight">
+				{{companyDetail.companyDetail.mission}}
+			</h1>
+			<p class="leading-normal text-2xl mb-8">
+				{{companyDetail.companyDetail.missionDescription}}
+			</p>
+			<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+				Earn Green Cash
+			</button>
 			
 		</div>
 		<!--Right Col-->
@@ -280,7 +289,7 @@
 	
 	
 		
-		<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+		<!-- <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
 			
 			<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
 				<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
@@ -318,30 +327,69 @@
 				</div>
 			</div>
 			
-			
-			
 			<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
 				<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-					<div class="p-8 text-3xl font-bold text-center border-b-4">Pro</div>
-					<ul class="w-full text-center text-sm">
-						<li class="border-b py-4">Thing</li>
-						<li class="border-b py-4">Thing</li>
-						<li class="border-b py-4">Thing</li>
-					</ul>
+					<div class="p-8 text-3xl font-bold text-center text-black border-b-4">Pro</div>
+				</div>
+				<div class="text-center sm:text-left sm:flex mb-4">
+            <img class="h-32 w-32 rounded-full border-4 border-white -mt-16 mr-4" src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
+            <div class="py-2">
+                <h3 class="font-bold text-2xl text-black mb-1">Cait Genevieve</h3>
+            </div>
 				</div>
 				<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-					<div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">£x.99 <span class="text-base">/ per user</span></div>
+					<div class="w-full pt-6 text-3xl text-gray-600 font-bold  text-black text-center">£x.99 <span class="text-base">/ per user</span></div>
 					<div class="flex items-center justify-center">
-						<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Aditya</button>
+						<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">{{companyDetail.team[2].name}}</button>
 					</div>
 				</div>
 			</div>
 
+		</div> -->
+		
+		<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+			
+			<!-- team detail -->
+			<!-- :src="require('../../../assets/team_photos/aniket.jpg')" 
+					:alt="require('../../../assets/team_photos/aniket.jpg')" -->
+				<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id, index) in companyDetail.team">
+					<!-- <img v-if="profile.profilePicture" class="rounded-full p-4 border-solid border-white border-2 m-auto" 
+					:src='require(profile.profilePicture)' 
+					:alt='require(profile.profilePicture)' 
+					:width="200" /> -->
+					<!-- <img :src="require(profile.profilePicture)" /> -->
+					<div class="text-center px-3 pb-6 pt-2">
+						<h3 class="text-black text-sm bold font-sans">{{profile.name}}</h3>
+						<h4 class="text-black text-sm bold font-sans">{{profile.title}}</h4>
+						<p class="mt-2 font-sans font-light text-grey-dark">{{profile.shortBio}}</p>
+					</div>
+					<!-- social media urls -->
+					<div class="flex text-center justify-around">
+						<div class="px-2 py-2">
+							<a :href="profile.facebook">
+								<i class="fa-lg fab fa-facebook-square text-grey" />
+							</a>
+						</div>
+						<div class="px-2 py-2">
+							<a :href="profile.instagram">
+								<i class="fa-lg fab fa-instagram text-grey"/>
+							</a>
+						</div>
+						<div class="px-2 py-2">
+							<a :href="profile.linkedin">
+								<i class="fa-lg fab fa-linkedin text-grey"/>
+							</a>
+						</div>
+						<div class="px-2 py-2">
+							<a :href="profile.twitter">
+								<i class="fa-lg fab fa-twitter-square text-grey"/>
+							</a>
+						</div>
+					</div>
+			</div>
 		</div>
-		
 	</div>
-		
-		
+	</div>
 </section>
 
 <!-- Change the colour #f8fafc to match the previous section colour -->
@@ -363,20 +411,16 @@
 </svg>
 
 <section class="mx-auto text-center py-6 mb-12 gradient">
-
 	<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Himalayas Hero Cycles</h1>
 	<div class="w-full mb-4">	
 		<div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
 	</div>
-
 	<h3 class="my-4 text-3xl leading-tight">Sign up to volunteer in Himalaya!</h3>	
-
 	<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
     <a class="text-blue no-underline hover:text-gray-800 hover:text-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
       Apply to Volunteer
     </a>
   </button>
-		
 </section>
 
 <!--Footer-->
@@ -458,6 +502,9 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import companyDetail from '../../../assets/json/company.json';
+import aniketPic from '@/assets/team_photos/aniket.jpg';
+// import * as ap from './public/team_photos/aniket.jpg';
 
 export default {
   name: 'HimalayasHeroHondaPage',
@@ -468,7 +515,8 @@ export default {
     return {
       hideNavScroll: false,
       cachedQuery: {},
-      renderReady: false,
+	  renderReady: false,
+	  companyDetail,
     };
   },
   computed: {
@@ -481,7 +529,10 @@ export default {
         }, 0);
       }
       return this.$route.name;
-    },
+	},
+	background () {
+    	return require('../../../assets/team_photos/' + this.id + '.jpg')
+  	},
   },
   watch: {
     $route(to, from) {

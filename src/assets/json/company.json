@@ -1,33 +1,48 @@
 {
     "companyDetail" : {
-        "name" : "Stone Pater Scissors",
-        "mission" : "",
+        "address" : "",
+        "name" : "Stone Paper Scissors",
+        "objective" : "we are your one stop shop for enviornment friendly products",
+        "mission" : "make mother earth a better place for all of us",
+        "missionDescription" : "Purchase products from us to save enviornment and earn green cash to get trending deals on your favourite brands!",
         "linkedin" : "",
         "facebook" : "",
         "google" : "",
-        "github" : "",
+        "github" : ""
     },
     "team" : [
         {
+            "id": 1,
+            "facebook" : "https://www.facebook.com/aditya.verma.3323457",
+            "instagram" : "https://www.instagram.com/aadi.003/",
+            "linkedin" : "https://www.linkedin.com/in/adityaverma03/",
             "name" : "Shrey Saxena",
+            "profilePicture" : "../../../assets/team_photos/aniket.jpg",
+            "shortBio" : "Product Guy",
             "title" : "Co Founder",
-            "linkedin" : "",
-            "facebook" : "",
-            "google" : ""
+            "twitter" : "https://www.linkedin.com/in/aniketdogra/"
         },
         {
-            "name" : "Aniket ",
+            "id": 2,
+            "facebook" : "https://www.facebook.com/aditya.verma.3323457",
+            "instagram" : "https://www.instagram.com/aadi.003/",
+            "linkedin" : "https://www.linkedin.com/in/aniketdogra/",
+            "name" : "Aniket Dogra",
+            "profilePicture" : "../../../assets/team_photos/aniket.jpg",
+            "shortBio" : "UI/UX Guy",
             "title" : "Co Founder",
-            "linkedin" : "",
-            "facebook" : "",
-            "google" : ""
+            "twitter" : "https://www.linkedin.com/in/aniketdogra/"
         },
         {
+            "id": 3,
+            "facebook" : "https://www.facebook.com/aditya.verma.3323457",
+            "instagram" : "https://www.instagram.com/aadi.003/",
+            "linkedin" : "https://www.linkedin.com/in/adityaverma03/",
             "name" : "Aditya Kumar",
+            "profilePicture" : "../../../assets/team_photos/aniket.jpg",
+            "shortBio" : "Product Guy",
             "title" : "Co Founder",
-            "linkedin" : "",
-            "facebook" : "",
-            "google" : ""
+            "twitter" : "https://www.linkedin.com/in/aniketdogra/"
         }
     ]
 }
