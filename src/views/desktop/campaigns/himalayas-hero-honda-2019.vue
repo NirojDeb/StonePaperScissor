@@ -6,11 +6,8 @@
 		<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 			<div class="pl-4 flex items-center">
 				<a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-					<!--Icon from: http://www.potlabicons.com/ -->
-					<svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
-						<rect x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" fill="rgb(0,0,0)" />
-						<path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z " />
-					</svg>{{companyDetail.companyDetail.name}}</a>
+					{{companyDetail.companyDetail.name}}
+				</a>
 			</div>
 			<div class="block lg:hidden pr-4">
 				<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
@@ -213,7 +210,7 @@
 	
 	<div class="container mx-auto flex flex-wrap pt-4 pb-12">
 	
-		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Title</h1>
+		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-black">{{companyDetail.companyDetail.followUs}}</h1>
 		<div class="w-full mb-4">	
 			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 		</div>
@@ -221,16 +218,22 @@
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-					<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
-					<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
-					<p class="text-gray-800 text-base px-6 mb-5">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
+					<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6">Facebook</p> -->
+					<div class="w-full font-bold text-fb text-xl text-center px-6">
+						Facebook
+					</div>
+					<p class="text-gray-800 text-center text-base px-6 mb-5">
+						<!-- Stone Paper Scissor -->
 					</p>
 				</a>
 			</div>
 			<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 				<div class="flex items-center justify-start">
-					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
+					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+						<a href="https://www.google.com/" class="flex flex-wrap no-underline text-white hover:no-underline">
+							{{companyDetail.companyDetail.follow}}
+						</a>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -240,16 +243,19 @@
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-					<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
-					<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
+					<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p> -->
+					<div class="w-full font-bold text-xl text-center text-gray-800 px-6">
+						Instagram
+					</div>
 					<p class="text-gray-800 text-base px-6 mb-5">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 					</p>
 				</a>
 			</div>
 			<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 				<div class="flex items-center justify-center">
-					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
+					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+						{{companyDetail.companyDetail.follow}}
+					</button>
 				</div>
 			</div>
 		</div>
@@ -259,16 +265,19 @@
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-					<p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p>
-					<div class="w-full font-bold text-xl text-gray-800 px-6">Lorem ipsum dolor sit amet.</div>
+					<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6"></p> -->
+					<div class="w-full font-bold text-xl text-center text-gray-800 px-6">
+						Twitter
+					</div>
 					<p class="text-gray-800 text-base px-6 mb-5">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. 
 					</p>
 				</a>
 			</div>
 			<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 				<div class="flex items-center justify-end">
-					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action</button>
+					<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
+						{{companyDetail.companyDetail.follow}}
+					</button>
 				</div>
 			</div>
 		</div>
@@ -433,7 +442,7 @@
 			
 				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
 					<path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "/>
-					Stone Paper Scissors
+					{{companyDetail.companyDetail.name}}
 				</a>
 			</div>
 		

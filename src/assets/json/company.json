@@ -5,10 +5,12 @@
         "objective" : "we are your one stop shop for enviornment friendly products",
         "mission" : "make mother earth a better place for all of us",
         "missionDescription" : "Purchase products from us to save enviornment and earn green cash to get trending deals on your favourite brands!",
-        "linkedin" : "",
-        "facebook" : "",
-        "google" : "",
-        "github" : ""
+        "linkedin" : "https://www.google.com/",
+        "facebook" : "https://www.google.com/",
+        "google" : "https://www.google.com/",
+        "github" : "https://www.google.com/",
+        "follow" : "Follow",
+        "followUs" : "Follow Us"
     },
     "team" : [
         {

@@ -16,7 +16,7 @@ module.exports = {
         /manifest\.json$/,
       ],
     },
-    themeColor: '#FF545E',
+    themeColor: '#3b5998',
   },
   devServer: {
     port: 4000,
