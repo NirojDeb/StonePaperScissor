@@ -17,23 +17,23 @@
 					</svg>
 				</button>
 			</div>
-			
+
 			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 				<ul class="list-reset lg:flex justify-end flex-1 items-center">
-					<li class="mr-12">	
+					<li class="mr-12">
 						<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">
 							Home
 						</a>
 					</li>
-					<li class="mr-12">	
+					<li class="mr-12">
 						<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
 							Team
 						</a>
 					</li>
 				</ul>
-				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 
+				<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800
 				font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75">
-         			<a class="text-blue no-underline hover:text-gray-800 hover:text-underline" 
+         			<a class="text-blue no-underline hover:text-gray-800 hover:text-underline"
 						href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
            				Partner With Us
            			</a>
@@ -57,16 +57,17 @@
 			<p class="leading-normal text-2xl mb-8">
 				{{companyDetail.companyDetail.missionDescription}}
 			</p>
-			<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-				Earn Green Cash
+			<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800
+		font-bold rounded-full my-6 py-4 px-8 shadow-lg" v-on:click="addItemInCart()">
+				Add to Cart
 			</button>
-			
+
 		</div>
 		<!--Right Col-->
 		<div class="w-full md:w-3/5 py-6 text-center">
-			<img class="w-full md:w-4/5 z-50" src="hero.png">
+			<img class="w-full md:w-4/5 z-50" src="@/assets/download.jpeg">
 		</div>
-		
+
 	</div>
 
 </div>
@@ -89,10 +90,10 @@
 <section class="bg-white border-b py-8">
 	<div class="container max-w-5xl mx-auto m-8">
 		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-black text-center text-gray-800">Title</h1>
-		<div class="w-full mb-4">	
+		<div class="w-full mb-4">
 			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 		</div>
-	
+
 		<div class="flex flex-wrap">
 			<div class="w-5/6 sm:w-1/2 p-6">
 				<h3 class="text-3xl text-gray-800 text-black font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
@@ -154,9 +155,9 @@
 
 			</div>
 		</div>
-		
-		
-		<div class="flex flex-wrap flex-col-reverse sm:flex-row">	
+
+
+		<div class="flex flex-wrap flex-col-reverse sm:flex-row">
 			<div class="w-full sm:w-1/2 p-6 mt-6">
 				<svg class="w-5/6 sm:h-64 mx-auto" viewBox="0 0 1176.60617 873.97852" xmlns="http://www.w3.org/2000/svg">
 				<title>connected world</title>
@@ -207,14 +208,14 @@
 </section>
 
 <section class="bg-white border-b py-8">
-	
+
 	<div class="container mx-auto flex flex-wrap pt-4 pb-12">
-	
+
 		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-black">{{companyDetail.companyDetail.followUs}}</h1>
-		<div class="w-full mb-4">	
+		<div class="w-full mb-4">
 			<div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
 		</div>
-	
+
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -237,9 +238,8 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
+
+
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -259,9 +259,8 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
+
+
 		<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 			<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 				<a href="#" class="flex flex-wrap no-underline hover:no-underline">
@@ -281,8 +280,8 @@
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 	</div>
 
 </section>
@@ -292,14 +291,13 @@
 	<div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
 
 		<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800  text-black">Team</h1>
-		<div class="w-full mb-4">	
+		<div class="w-full mb-4">
 			<div class="h-1 mx-auto w-64 opacity-25 my-0 py-0 rounded-t"></div>
 		</div>
-	
-	
-		
+
+
 		<!-- <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-			
+
 			<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
 				<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
 					<div class="p-8 text-3xl font-bold text-center border-b-4">Free</div>
@@ -316,7 +314,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
 				<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 					<div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
@@ -326,7 +324,7 @@
 						<li class="border-b py-4">Thing</li>
 						<li class="border-b py-4">Thing</li>
 						<li class="border-b py-4">Thing</li>
-					</ul>					
+					</ul>
 				</div>
 				<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 					<div class="w-full pt-6 text-4xl font-bold text-center">£x.99 <span class="text-base">/ per user</span></div>
@@ -335,7 +333,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
 				<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
 					<div class="p-8 text-3xl font-bold text-center text-black border-b-4">Pro</div>
@@ -355,18 +353,25 @@
 			</div>
 
 		</div> -->
-		
+
 		<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-			
+
 			<!-- team detail -->
-			<!-- :src="require('../../../assets/team_photos/aniket.jpg')" 
+			<!-- :src="require('../../../assets/team_photos/aniket.jpg')"
 					:alt="require('../../../assets/team_photos/aniket.jpg')" -->
 				<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id, index) in companyDetail.team">
-					<!-- <img v-if="profile.profilePicture" class="rounded-full p-4 border-solid border-white border-2 m-auto" 
-					:src='require(profile.profilePicture)' 
-					:alt='require(profile.profilePicture)' 
-					:width="200" /> -->
-					<!-- <img :src="require(profile.profilePicture)" /> -->
+					<img v-if="profile.name === 'Aniket Dogra'"
+					class="rounded-full w-40 h-40"
+					alt="@/assets/team_photos/aniket.jpg"
+					src="@/assets/team_photos/aniket.jpg" />
+					<img v-if="profile.name === 'Aditya Kumar'"
+					class="rounded-full w-40 h-40 flex items-center justify-center"
+					alt="@/assets/team_photos/aditya.png"
+					src="@/assets/team_photos/aditya.png" />
+					<img v-if="profile.name === 'Shrey Saxena'"
+					class="rounded-full w-40 h-40 flex items-center justify-center"
+					alt="@/assets/team_photos/shrey.jpg"
+					src="@/assets/team_photos/shrey.jpg" />
 					<div class="text-center px-3 pb-6 pt-2">
 						<h3 class="text-black text-sm bold font-sans">{{profile.name}}</h3>
 						<h4 class="text-black text-sm bold font-sans">{{profile.title}}</h4>
@@ -421,10 +426,10 @@
 
 <section class="mx-auto text-center py-6 mb-12 gradient">
 	<h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Himalayas Hero Cycles</h1>
-	<div class="w-full mb-4">	
+	<div class="w-full mb-4">
 		<div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
 	</div>
-	<h3 class="my-4 text-3xl leading-tight">Sign up to volunteer in Himalaya!</h3>	
+	<h3 class="my-4 text-3xl leading-tight">Sign up to volunteer in Himalaya!</h3>
 	<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
     <a class="text-blue no-underline hover:text-gray-800 hover:text-underline" href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
       Apply to Volunteer
@@ -437,16 +442,16 @@
 	<div class="container mx-auto  px-8">
 
         <div class="w-full flex flex-col md:flex-row py-6">
-				
+
 			<div class="flex-1 mb-6">
-			
-				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+
+				<a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#">
 					<path class="plane-take-off" d=" M 510.7 189.151 C 505.271 168.95 484.565 156.956 464.365 162.385 L 330.156 198.367 L 155.924 35.878 L 107.19 49.008 L 211.729 230.183 L 86.232 263.767 L 36.614 224.754 L 0 234.603 L 45.957 314.27 L 65.274 347.727 L 105.802 336.869 L 240.011 300.886 L 349.726 271.469 L 483.935 235.486 C 504.134 230.057 516.129 209.352 510.7 189.151 Z "/>
 					{{companyDetail.companyDetail.name}}
 				</a>
 			</div>
-		
-		
+
+
             <div class="flex-1">
                 <p class="uppercase text-gray-500 md:mb-6">Links</p>
                 <ul class="list-reset mb-6">
@@ -502,15 +507,22 @@
             </div>
         </div>
     </div>
-	
+
 	<p class="text-blue text-center p-12">NGO initiative of Growdiesel</p>
 
 </footer>
+
+	<!-- shopping footer -->
+	        <footer v-if="areItemsAddedInCart" class='fixed w-full pin-b bg-indigo text-white text-xl p-8'>
+            {{count}}		Total Amount {{totalAmount}}
+        </footer>
 	</section>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import { connect } from 'net';
+import { truncate } from 'fs';
 import companyDetail from '../../../assets/json/company.json';
 import aniketPic from '@/assets/team_photos/aniket.jpg';
 // import * as ap from './public/team_photos/aniket.jpg';
@@ -526,9 +538,23 @@ export default {
       cachedQuery: {},
 	  renderReady: false,
 	  companyDetail,
+	  areItemsAddedInCart: false,
+	  count: 0,
+	  maxItems: 500,
+	  amount: 60,
+	  totalAmount: 0,
     };
   },
   computed: {
+    addItemInCart() {
+      if (this.areItemsAddedInCart == false) {
+        this.areItemsAddedInCart = true;
+      }
+      if (this.count += this.maxItems > 1) {
+        this.count += 1;
+        this.totalAmount = this.count * this.amount;
+      }
+    },
     ...mapGetters(['request']),
     routeName() {
       if (this.$route.meta.saveScrollPos && this.viewScrollPos[this.$route.name]) {
@@ -538,9 +564,9 @@ export default {
         }, 0);
       }
       return this.$route.name;
-	},
-	background () {
-    	return require('../../../assets/team_photos/' + this.id + '.jpg')
+    },
+    background() {
+    	return require(`../../../assets/team_photos/${this.id}.jpg`);
   	},
   },
   watch: {

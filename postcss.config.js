@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
         './public/index.html',
         './src/**/*.vue',
       ],
-      whitelistPatterns: [/^fa-/, /^fade-/],
+      whitelistPatterns: [/^fa-/, /^fade-/,  /^bm-/],
       extractors: [
         {
           extractor: TailwindExtractor,
