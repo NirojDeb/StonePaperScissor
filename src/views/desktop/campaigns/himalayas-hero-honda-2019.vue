@@ -97,7 +97,7 @@
 				<div class="flex flex-wrap">
 					<div class="w-5/6 sm:w-1/2 p-6">
 						<h3 class="text-3xl text-gray-800 text-black font-bold leading-none mb-3">Become Partner</h3>
-						<p class="text-gray-600 mb-8 text-black">Sale enviornment friendly products with us and connect with like minded people and connect with our enviornment friendly initiatives<br /><br />
+						<p class="text-gray-600 mb-8 text-black">Sale environment friendly products with us and connect with like minded people and connect with our environment friendly initiatives<br /><br />
 						</p>
 					</div>
 					<div class="w-full sm:w-1/2 p-6">
@@ -198,7 +198,7 @@
 					<div class="w-full sm:w-1/2 p-6 mt-6">
 						<div class="align-middle">
 							<h3 class="text-3xl text-gray-800 font-bold leading-none mb-3 text-black">Sale your products worldwide</h3>
-							<p class="text-gray-600 mb-8 text-black">Sale your product to save planet and help others to choose enviornment friendly products.<br /><br />
+							<p class="text-gray-600 mb-8 text-black">Sale your product to save planet and help others to choose environment friendly products.<br /><br />
 							</p>
 						</div>
 					</div>
@@ -219,19 +219,19 @@
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6">Facebook</p> -->
-							<div class="w-full font-bold text-fb text-xl text-center px-6">
-								Facebook
+							<div class="w-full font-bold text-xl text-center px-6">
+								<!-- Facebook -->
+								<br>
+								<i class="fa-lg fab fa-facebook-square fa-4x text-green-400" />
 							</div>
 							<p class="text-gray-800 text-center text-base px-6 mb-5">
-								<!-- Stone Paper Scissor -->
 							</p>
 						</a>
 					</div>
 					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-						<div class="flex items-center justify-start">
+						<div class="flex items-center justify-center">
 							<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-								<a href="https://www.google.com/" class="flex flex-wrap no-underline text-white hover:no-underline">
+								<a :href="companyDetail.companyDetail.facebook" class="flex flex-wrap no-underline text-white hover:no-underline">
 									{{companyDetail.companyDetail.follow}}
 								</a>
 							</button>
@@ -243,9 +243,10 @@
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6">xGETTING STARTED</p> -->
 							<div class="w-full font-bold text-xl text-center text-gray-800 px-6">
-								Instagram
+								<!-- Instagram -->
+								<br>
+								<i class="fa-lg fab fa-instagram fa-4x text-green-400"/>
 							</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
 							</p>
@@ -254,7 +255,9 @@
 					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
 						<div class="flex items-center justify-center">
 							<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-								{{companyDetail.companyDetail.follow}}
+								<a :href="companyDetail.companyDetail.instagram" class="flex flex-wrap no-underline text-white hover:no-underline">
+									{{companyDetail.companyDetail.follow}}
+								</a>
 							</button>
 						</div>
 					</div>
@@ -264,18 +267,21 @@
 				<div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
 					<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
 						<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-							<!-- <p class="w-full text-gray-600 text-xs md:text-sm px-6"></p> -->
 							<div class="w-full font-bold text-xl text-center text-gray-800 px-6">
-								Twitter
+								<!-- Twitter -->
+								<br>
+								<i class="fa-lg fab fa-twitter-square fa-4x text-green-400"/>
 							</div>
 							<p class="text-gray-800 text-base px-6 mb-5">
 							</p>
 						</a>
 					</div>
 					<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-						<div class="flex items-center justify-end">
+						<div class="flex items-center justify-center">
 							<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-								{{companyDetail.companyDetail.follow}}
+								<a :href="companyDetail.companyDetail.twitter" class="flex flex-wrap no-underline text-white hover:no-underline">
+									{{companyDetail.companyDetail.follow}}
+								</a>							
 							</button>
 						</div>
 					</div>
@@ -295,71 +301,9 @@
 					<div class="h-1 mx-auto w-64 opacity-25 my-0 py-0 rounded-t"></div>
 				</div>
 
-
-				<!-- <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-
-					<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-						<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-							<div class="p-8 text-3xl font-bold text-center border-b-4">Free</div>
-							<ul class="w-full text-center text-sm">
-								<li class="border-b py-4">Thing</li>
-								<li class="border-b py-4">Thing</li>
-								<li class="border-b py-4">Thing</li>
-							</ul>
-						</div>
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">£0 <span class="text-base">for one user</span></div>
-							<div class="flex items-center justify-center">
-								<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Aniket</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-							<div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-							<div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
-							<ul class="w-full text-center text-base font-bold">
-								<li class="border-b py-4">Thing</li>
-								<li class="border-b py-4">Thing</li>
-								<li class="border-b py-4">Thing</li>
-								<li class="border-b py-4">Thing</li>
-							</ul>
-						</div>
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div class="w-full pt-6 text-4xl font-bold text-center">£x.99 <span class="text-base">/ per user</span></div>
-							<div class="flex items-center justify-center">
-								<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">Shrey</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-						<div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-							<div class="p-8 text-3xl font-bold text-center text-black border-b-4">Pro</div>
-						</div>
-						<div class="text-center sm:text-left sm:flex mb-4">
-					<img class="h-32 w-32 rounded-full border-4 border-white -mt-16 mr-4" src="https://randomuser.me/api/portraits/women/21.jpg" alt="">
-					<div class="py-2">
-						<h3 class="font-bold text-2xl text-black mb-1">Cait Genevieve</h3>
-					</div>
-						</div>
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-							<div class="w-full pt-6 text-3xl text-gray-600 font-bold  text-black text-center">£x.99 <span class="text-base">/ per user</span></div>
-							<div class="flex items-center justify-center">
-								<button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">{{companyDetail.team[2].name}}</button>
-							</div>
-						</div>
-					</div>
-
-				</div> -->
-
 				<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
 
-					<!-- team detail -->
-					<!-- :src="require('../../../assets/team_photos/aniket.jpg')"
-							:alt="require('../../../assets/team_photos/aniket.jpg')" -->
-						<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id, index) in companyDetail.team" v-bind:key="id">
+					<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id, index) in companyDetail.team" v-bind:key="id">
 							<img v-if="profile.name === 'Aniket Dogra'"
 							class="rounded-full w-40 h-40"
 							alt="@/assets/team_photos/aniket.jpg"
@@ -402,7 +346,6 @@
 							</div>
 					</div>
 				</div>
-			</div>
 			</div>
 		</section>
 
@@ -447,7 +390,7 @@
 							{{companyDetail.companyDetail.name}}
 						</a>
 					</div>
-					<div class="flex-1">
+					<!-- <div class="flex-1">
 						<p class="uppercase text-gray-500 md:mb-6">Links</p>
 						<ul class="list-reset mb-6">
 							<li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -499,7 +442,7 @@
 								<a href="#" class="no-underline hover:underline text-gray-800 hover:text-orange-500">Contact</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<p class="text-blue text-center p-12">NGO initiative of Growdiesel</p>
@@ -531,10 +474,6 @@ import { mapActions, mapGetters } from 'vuex';
 import { connect } from 'net';
 import { truncate } from 'fs';
 import companyDetail from '../../../assets/json/company.json';
-import aniketPic from '@/assets/team_photos/aniket.jpg';
-// import { checksum_lib } from '@/paytm/checksum';
-// const https = require('https');
-// import * as ap from './public/team_photos/aniket.jpg';
 
 export default {
   name: 'HimalayasHeroHondaPage',
@@ -566,9 +505,6 @@ export default {
       }
       return this.$route.name;
     },
-    background() {
-    	return require(`../../../assets/team_photos/${this.id}.jpg`);
-  	},
   },
   watch: {
     $route(to, from) {
