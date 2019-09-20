@@ -34,7 +34,7 @@
 					</div>
 					
 <div class="sidebar lg:hidden" style="right:0px;top:0px;" id="rightMenu">
-<button @click="closeRightMenu()" class="close-button">Close <i class="fa fa-window-close"></i></button>
+<button class="close-button">StonePaperScissor</button>
 
   <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
   <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
@@ -58,6 +58,7 @@
 			</nav>
 		</header>
 		<!--Hero-->
+		<div @click="closeRightMenu()" id="full">
 		<div class="pt-24 gradient">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 				<!--Left Col-->
@@ -482,6 +483,8 @@
 				</div>
 			</div>
 		</footer>
+		
+			</div>
 	</section>
 </template>
 
@@ -559,10 +562,12 @@ export default {
 
 	openRightMenu() {
 	document.getElementById("rightMenu").setAttribute("style", "right: 0px; top: 0px; transition: 1.5s;");
+	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
 },
 
 closeRightMenu() {
   document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
+	document.getElementById("full").setAttribute("style", "opacity: 1; position: relative; right: 0px; transition: 1.5s;");
 },
   },
 };
@@ -638,5 +643,15 @@ background-color: #d5f3e1;
 .side-button-partner a
 {
 				color: #2bbaae!important;
+}
+@media only screen and (max-width: 991px)
+{
+	#full
+	{
+		opacity: .5;
+		right: 250px;
+		position: relative;
+		transition: 1.5s;
+	}
 }
 </style>
