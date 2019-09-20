@@ -190,7 +190,7 @@ const routes = [
   {
     path: '/',
     name: 'RootPage',
-    redirect: '/himalayas-hero-2019',
+    redirect: '/home',
   },
 
   /* Auth Pages */
@@ -200,7 +200,7 @@ const routes = [
     component: DownloadPage,
   },
   {
-    path: '/himalayas-hero-2019',
+    path: '/home',
     name: 'CampaignRootPage',
     component: CampaignPage,
     meta: {

@@ -353,11 +353,11 @@
 										<i class="fa-lg fab fa-linkedin text-grey"/>
 									</a>
 								</div>
-								<div class="px-2 py-2">
+								<!-- <div class="px-2 py-2">
 									<a :href="profile.twitter">
 										<i class="fa-lg fab fa-twitter-square text-grey"/>
 									</a>
-								</div>
+								</div> -->
 							</div>
 					</div>
 				</div>
