@@ -5,7 +5,7 @@
 			<nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
 				<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 					<div class="pl-4 flex items-center">
-						<img src="../../../assets\logo-white.png" class="logo">
+						<img src="../../../assets/logo-white.png" class="logo">
 						<a class="algerian toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
 							{{companyDetail.companyDetail.name}}
 						</a>
@@ -36,7 +36,7 @@
 					
 <div class="sidebar lg:hidden" style="right:-250px;top:0px;" id="rightMenu">
 <button class="close-button">
-	<img src="../../../assets\logo-white.png" class="logo">
+	<img src="../../../assets/logo-white.png" class="logo">
 <h2>SPS</h2>
 </button>
 
