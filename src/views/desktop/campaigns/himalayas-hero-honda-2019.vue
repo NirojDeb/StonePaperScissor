@@ -6,7 +6,7 @@
 				<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 					<div class="pl-4 flex items-center">
 						<img src="../../../assets/logo-white.png" class="logo">
-						<a class="algerian toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+						<a class="algerian small-font toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
 							{{companyDetail.companyDetail.name}}
 						</a>
 					</div>
@@ -14,13 +14,13 @@
 
 					<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 						<ul class="list-reset lg:flex justify-end flex-1 items-center">
-							<li class="mr-12">
+							<li>
 								<a class="algerian inline-block py-2 px-4 text-white font-bold no-underline" href="#">
 									Home
 								</a>
 							</li>
-							<li class="mr-12">
-								<a class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
+							<li>
+								<a @click="openPopup()" class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
 									Team
 								</a>
 							</li>
@@ -43,13 +43,13 @@
   <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
   <!-- <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
 	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Reviews</button></a> -->
-	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-users"></i> Team</button></a>
+	<a href="#" class="no-underline" @click="openPopup()"><button class="side-button"><i class="fas fa-users"></i> Team</button></a>
 	  <button id="navAction" class="side-button-partner mx-2 lg:mx-0 hover:underline bg-white text-gray-800
 						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank" class="no-underline hover:text-gray-800 hover:text-underline">
 							<i class="fa fa-handshake"></i>	Partner With Us
 							</a></button>
 </div>
-<div class="block lg:hidden pl-4">
+<div class="block lg:hidden mr-4">
 						<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none" @click="openRightMenu()">
 							<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 								<title>Menu</title>
@@ -61,9 +61,16 @@
 				<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 			</nav>
 		</header>
+		<div id="popup">
+    <div class="head"><h2>The page is about to launch.</h2></div>
+<img src="/img/popup.1fbed9fa.png" class="popup-bg">
+<div class="foot">
+				
+				<input type="text" size="20" name="email" placeholder="Enter Email..."><button>Subscribe</button>
+			</div></div>
 		<!--Hero-->
-		<div @click="closeRightMenu()" id="full">
-		<div class="pt-24 gradient">
+		<div @click="closeRightMenu(), closePopup()" id="full">
+		<div class="pt-24 gradient h-screen">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 				<!--Left Col-->
 				<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
@@ -564,6 +571,17 @@ export default {
 		window.location.href = 'https://rzp.io/l/bOQRt9R';
 	},
 
+	openPopup() {
+	document.getElementById("popup").setAttribute("style", "display:block; transition: 1s;");
+	document.getElementById("full").setAttribute("style", "opacity: 0.5; transition: 1s;");
+  document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
+	},
+
+	closePopup() {
+	document.getElementById("popup").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
+	document.getElementById("full").setAttribute("style", "opacity: 1; transition: 1s;");
+	},
+
 	openRightMenu() {
 	document.getElementById("rightMenu").setAttribute("style", "right: 0px; top: 0px; transition: 1.5s;");
 	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
@@ -616,7 +634,7 @@ closeRightMenu() {
 padding: 8px 16px;
 width: 100%;
     background-color: #33d575;
-    font-family: monospace;
+    font-family: algerian;
 		box-shadow: 0px 8px 8px -6px black;
 		transition: .6s;		
     display: flex;
@@ -650,8 +668,8 @@ width: 100%;
     width: -webkit-fill-available;
     text-align: left;
     font-size: 20px;
+		font-family: algerian;
     font-weight: 600;
-    font-family: monospace;
     margin: 10px;
     border-radius: 5px;
 }
@@ -663,6 +681,60 @@ width: 100%;
 {
 				color: #2bbaae!important;
 }
+
+#popup {
+    height: 505px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    z-index: 33;
+    box-sizing: border-box;
+    background-color: #0000007a;
+		display: none;
+}
+.head {
+    position: relative;
+    width: 100%;
+    color: black;
+    height: 70px;
+    background: linear-gradient(90deg, #28b0c5 0%, #33d574 100%);
+}
+.head h2 {
+    text-align: center;
+    color: white;
+    font-family: algerian;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.popup-bg {
+    height: 400px;
+    display: block;
+    margin: auto;
+}
+.foot {
+    position: relative;
+    width: auto;
+    height: 30px;
+    display: flex;
+}
+.foot input[type="text"] {
+    height: 30px;
+    width: 70%;
+    background-color: #28b1c4;
+    margin-left: 0px;
+}
+.foot button {
+    color: white;
+    font-family: monospace;
+    background: #33d475;
+    height: 30px;
+    width: 30%;
+		margin-right: .5px;
+}
 @media only screen and (max-width: 991px)
 {
 	#full
@@ -672,5 +744,203 @@ width: 100%;
 		position: relative;
 		transition: 1.5s;
 	}
+
+#popup {
+    height: 404px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    z-index: 33;
+    box-sizing: border-box;
+    background-color: #0000007a;
+		display: none;
+}
+.head {
+    position: relative;
+    width: 100%;
+    color: black;
+    height: 56px;
+    background: linear-gradient(90deg, #28b0c5 0%, #33d574 100%);
+}
+.head h2 {
+    text-align: center;
+    color: white;
+    font-family: algerian;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.popup-bg {
+    height: 320px;
+    display: block;
+    margin: auto;
+}
+.foot {
+    position: relative;
+    width: auto;
+    height: 24px;
+    display: flex;
+}
+.foot input[type="text"] {
+    height: 24px;
+    width: 70%;
+    background-color: #28b1c4;
+    margin-left: 1px;
+}
+.foot button {
+    color: white;
+    font-family: monospace;
+    background: #33d475;
+    height: 24px;
+    width: 30%;
+}
+}
+
+@media only screen and (max-width: 700px)
+{
+
+#popup {
+    height: 323px;
+    width: 320px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    z-index: 33;
+    box-sizing: border-box;
+    background-color: #0000007a;
+		display: none;
+}
+.head {
+    position: relative;
+    width: 100%;
+    color: black;
+    height: 45px;
+    background: linear-gradient(90deg, #28b0c5 0%, #33d574 100%);
+}
+.head h2 {
+    text-align: center;
+    color: white;
+		font-size: larger;
+    font-family: algerian;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.popup-bg {
+    height: 256px;
+    display: block;
+    margin: auto;
+}
+.foot {
+    position: relative;
+    width: auto;
+    height: 19px;
+    display: flex;
+    margin: -2px 0px 0px -1px;
+}
+.foot input[type="text"] {
+    height: 19px;
+    width: 70%;
+    background-color: #28b1c4;
+    margin-left: 1px;
+}
+.foot button {
+    color: white;
+    font-family: monospace;
+    background: #33d475;
+    height: 19px;
+    width: 30%;
+}
+}
+@media only screen and (max-width: 500px)
+{
+
+#popup {
+    height: 262px;
+    width: 260px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    z-index: 33;
+    box-sizing: border-box;
+    background-color: #0000007a;
+		display: none;
+}
+.head {
+    position: relative;
+    width: 100%;
+    color: black;
+    height: 36px;
+    background: linear-gradient(90deg, #28b0c5 0%, #33d574 100%);
+}
+.head h2 {
+    text-align: center;
+    color: white;
+		font-size: medium;
+    font-family: algerian;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.popup-bg {
+    height: 205px;
+    display: block;
+    margin: auto;
+}
+.foot {
+    position: relative;
+    width: auto;
+    height: 15.2px;
+    display: flex;
+    margin: 1px -.5px 0px 0px;
+}
+.foot input[type="text"] {
+    height: 15.2px;
+    width: 70%;
+    background-color: #28b1c4;
+    margin-left: 1px;
+}
+.foot button {
+    color: white;
+    font-family: monospace;
+    background: #33d475;
+    height: 15.2px;
+    width: 30%;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:smaller;
+}
+}
+
+@media screen and (max-width: 430px) {
+	.small-font
+	{
+		font-size: 1.2rem;
+	}
+	.logo
+	{
+		height: 50px;
+		width: 50px;
+	}
+	
+}
+@media screen and (max-width: 360px) {
+	.small-font
+	{
+		font-size: 1rem;
+	}
+	.logo
+	{
+		height: 40px;
+		width: 40px;
+	}
+	
 }
 </style>
