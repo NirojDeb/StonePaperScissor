@@ -72,6 +72,7 @@
 		<div @click="closeRightMenu(), closePopup()" id="full">
 		<div class="pt-24 gradient h-screen">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+				<!-- <span class="span1"></span><span class="span4"></span><span class="span3"></span><span class="span2"></span><span class="span5"></span> -->
 				<!--Left Col-->
 				<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
 					<p class="uppercase tracking-loose w-full">
@@ -694,6 +695,8 @@ width: 100%;
     box-sizing: border-box;
     background-color: #0000007a;
 		display: none;
+		box-shadow: 0px 0px 30px 0px black;
+		border-radius: 20px 0px 20px 0px;
 }
 .head {
     position: relative;
@@ -701,6 +704,7 @@ width: 100%;
     color: black;
     height: 70px;
     background: linear-gradient(90deg, #28b0c5 0%, #33d574 100%);
+		border-radius: 20px 0px 20px 0px;
 }
 .head h2 {
     text-align: center;
@@ -726,6 +730,8 @@ width: 100%;
     width: 70%;
     background-color: #28b1c4;
     margin-left: 0px;
+		padding: 0px 10px;
+		border-radius: 20px 0px 0px 0px;
 }
 .foot button {
     color: white;
@@ -734,6 +740,7 @@ width: 100%;
     height: 30px;
     width: 30%;
 		margin-right: .5px;
+		border-radius: 0px 0px 17px 0px;
 }
 @media only screen and (max-width: 991px)
 {
@@ -872,6 +879,7 @@ width: 100%;
     box-sizing: border-box;
     background-color: #0000007a;
 		display: none;
+		box-shadow: 0px 0px 15px 0px black;
 }
 .head {
     position: relative;
@@ -943,4 +951,36 @@ width: 100%;
 	}
 	
 }
+// .span1, .span2, .span3, .span4, .span5 {
+//     height: 150px;
+//     width: 150px;
+//     position: absolute;
+//     background-color: #ffffff1f;
+//     border-radius: 50%;
+// }
+
+// .span2 {
+//     top: 0px;
+//     right: 60px;
+// }
+
+// .span3 {
+//     top: 100px;
+//     left: 50%;
+// }
+
+// .span4 {
+//     left: -20px;
+//     top: 160px;
+// }
+
+// .span5 {
+//     bottom: 50px;
+//     left: 70%;
+// }
+
+// .span1 {
+//     left: 30%;
+//     top: 52%;
+// }
 </style>
