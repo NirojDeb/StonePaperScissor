@@ -9,14 +9,7 @@
 							{{companyDetail.companyDetail.name}}
 						</a>
 					</div>
-					<div class="block lg:hidden pr-4">
-						<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
-							<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-								<title>Menu</title>
-								<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-							</svg>
-						</button>
-					</div>
+
 
 					<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 						<ul class="list-reset lg:flex justify-end flex-1 items-center">
@@ -31,7 +24,7 @@
 								</a>
 							</li>
 						</ul>
-						<button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800
+						<button id="navAction" class="mx-2 lg:mx-0 hover:underline bg-white text-gray-800
 						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75">
 							<a class="text-blue no-underline hover:text-gray-800 hover:text-underline"
 								href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
@@ -39,11 +32,33 @@
 							</a>
 						</button>
 					</div>
+					
+<div class="sidebar lg:hidden" style="right:0px;top:0px;" id="rightMenu">
+<button class="close-button">StonePaperScissor</button>
+
+  <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
+  <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
+	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Reviews</button></a>
+	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-users"></i> Team</button></a>
+	  <button id="navAction" class="side-button-partner mx-2 lg:mx-0 hover:underline bg-white text-gray-800
+						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank" class="no-underline hover:text-gray-800 hover:text-underline">
+							<i class="fa fa-handshake"></i>	Partner With Us
+							</a></button>
+</div>
+<div class="block lg:hidden pl-4">
+						<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none" @click="openRightMenu()">
+							<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<title>Menu</title>
+								<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+							</svg>
+						</button>
+					</div>
 				</div>
 				<hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
 			</nav>
 		</header>
 		<!--Hero-->
+		<div @click="closeRightMenu()" id="full">
 		<div class="pt-24 gradient">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 				<!--Left Col-->
@@ -380,6 +395,8 @@
 		</button>
 		</section> -->
 
+
+
 		<!--Footer-->
 		<footer class="bg-white">
 			<div class="container mx-auto  px-8">
@@ -466,6 +483,8 @@
 				</div>
 			</div>
 		</footer>
+		
+			</div>
 	</section>
 </template>
 
@@ -540,6 +559,16 @@ export default {
 		// });
 		window.location.href = 'https://rzp.io/l/bOQRt9R';
 	},
+
+	openRightMenu() {
+	document.getElementById("rightMenu").setAttribute("style", "right: 0px; top: 0px; transition: 1.5s;");
+	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
+},
+
+closeRightMenu() {
+  document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
+	document.getElementById("full").setAttribute("style", "opacity: 1; position: relative; right: 0px; transition: 1.5s;");
+},
   },
 };
 </script>
@@ -558,4 +587,71 @@ export default {
 	background: linear-gradient(90deg, #33d574 0%, #28b0c5 100%);
 }
 
+@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+
+
+.sidebar
+{
+	height:100%;
+	width:250px;
+    background: linear-gradient(to right, #16cf73 30%, #4a4acc 100%);
+			position:fixed!important;
+	overflow:auto;
+	z-index: 31;
+	animation: animateright .4s;
+    box-shadow: 10px 0px 9px 10px black;
+	transition: 1.5s;
+}
+
+.close-button
+{display: block;
+padding: 8px 16px;
+width: 100%;
+text-align: left;
+color: inherit;
+text-decoration: none;
+font-size: 26px;
+font-weight: 700;
+font-family: monospace;
+    background-color: #33d575;
+    font-family: monospace;
+		box-shadow: 0px 8px 8px -6px black;
+		transition: .6s;
+}
+.close-button:hover{text-shadow: 0px 3px 8px;}
+.side-button {
+background-color: #d5f3e1;
+    border: none;
+    color: #2bbaae;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: -webkit-fill-available;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #000000;
+}
+.side-button-partner 
+{
+				box-shadow: inset 0 0 5px #000000;
+}
+.side-button-partner a
+{
+				color: #2bbaae!important;
+}
+@media only screen and (max-width: 991px)
+{
+	#full
+	{
+		opacity: .5;
+		right: 250px;
+		position: relative;
+		transition: 1.5s;
+	}
+}
 </style>
