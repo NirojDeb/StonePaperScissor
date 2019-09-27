@@ -1,6 +1,6 @@
 {
-  "name": "stone-paper-scissor-pwa",
-  "short_name": "stone-paper-scissor-pwa",
+  "name": "Stone Paper Scissors",
+  "short_name": "Stone Paper Scissors",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
