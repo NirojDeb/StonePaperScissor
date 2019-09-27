@@ -1,4 +1,4 @@
-# stone-paper-scissor-pwa
+# Stone Paper Scissors
 
 ## Project setup
 ```
