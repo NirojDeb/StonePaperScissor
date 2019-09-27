@@ -63,7 +63,7 @@
 		</header>
 		<div id="popup">
     <div class="head"><h2>The page is about to launch.</h2></div>
-<img src="/img/popup.1fbed9fa.png" class="popup-bg">
+<img src="../../../assets/popup.png" class="popup-bg">
 <div class="foot">
 				
 				<input type="text" size="20" name="email" placeholder="Enter Email..."><button>Subscribe</button>
