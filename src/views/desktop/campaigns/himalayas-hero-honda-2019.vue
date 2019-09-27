@@ -5,7 +5,8 @@
 			<nav id="header" class="fixed w-full z-30 top-0 text-white gradient">
 				<div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 gradient">
 					<div class="pl-4 flex items-center">
-						<a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+						<img src="../../../assets\logo-white.png" class="logo">
+						<a class="algerian toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
 							{{companyDetail.companyDetail.name}}
 						</a>
 					</div>
@@ -14,29 +15,29 @@
 					<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 						<ul class="list-reset lg:flex justify-end flex-1 items-center">
 							<li class="mr-12">
-								<a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">
+								<a class="algerian inline-block py-2 px-4 text-white font-bold no-underline" href="#">
 									Home
 								</a>
 							</li>
 							<li class="mr-12">
-								<a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
+								<a class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-8" href="#">
 									Team
 								</a>
 							</li>
 						</ul>
-						<button id="navAction" class="mx-2 lg:mx-0 hover:underline bg-white text-gray-800
+						<button id="navAction" class="mx-2 lg:mx-0 hover:underline bg-white font-bold text-gray-800
 						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75">
-							<a class="text-blue no-underline hover:text-gray-800 hover:text-underline"
+							<a class="algerian text-blue no-underline hover:text-gray-800 hover:text-underline"
 								href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank">
 								Partner With Us
 							</a>
 						</button>
 					</div>
 					
-<div class="sidebar lg:hidden" style="right:0px;top:0px;" id="rightMenu">
+<div class="sidebar lg:hidden" style="right:-250px;top:0px;" id="rightMenu">
 <button class="close-button">
-	<!-- <img src="assets/logo.png" class="w-full md:w-4/5 z-50"> -->
-	SPS
+	<img src="../../../assets\logo-white.png" class="logo">
+<h2>SPS</h2>
 </button>
 
   <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
@@ -75,7 +76,7 @@
 					<p class="leading-normal text-2xl mb-8">
 						{{companyDetail.companyDetail.missionDescription}}
 					</p>
-					<button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800
+					<button class="z-50 mx-auto lg:mx-0 hover:underline bg-white text-gray-800
 				font-bold rounded-full my-6 py-4 px-8 shadow-lg" @click="openCheckoutPage()">
 						Add to Cart
 					</button>
@@ -592,7 +593,11 @@ closeRightMenu() {
 
 @keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
 
-
+.algerian
+{
+	font-family: algerian;
+	margin: 0px 10px;
+}
 .sidebar
 {
 	height:100%;
@@ -607,25 +612,37 @@ closeRightMenu() {
 }
 
 .close-button
-{display: block;
+{
 padding: 8px 16px;
 width: 100%;
-text-align: left;
-color: inherit;
-text-decoration: none;
-font-size: 26px;
-font-weight: 700;
-font-family: monospace;
     background-color: #33d575;
     font-family: monospace;
 		box-shadow: 0px 8px 8px -6px black;
-		transition: .6s;
+		transition: .6s;		
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.close-button:hover{text-shadow: 0px 3px 8px;}
+.logo
+{
+	height: 60px;
+	width: 60px;
+}
+.close-button h2
+{
+	font-family: algerian;
+	font-size: 36px;
+	font-weight: bold;
+	color: white;
+}
+.close-button:focus, .side-button:focus, .side-button-partner:focus
+{
+	outline: none;
+}
+
 .side-button {
-background-color: #d5f3e1;
     border: none;
-    color: #2bbaae;
+    color: white;
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
@@ -637,7 +654,6 @@ background-color: #d5f3e1;
     font-family: monospace;
     margin: 10px;
     border-radius: 5px;
-    box-shadow: inset 0 0 5px #000000;
 }
 .side-button-partner 
 {
@@ -651,8 +667,8 @@ background-color: #d5f3e1;
 {
 	#full
 	{
-		opacity: .5;
-		right: 250px;
+		opacity: 1;
+		right: 0px;
 		position: relative;
 		transition: 1.5s;
 	}
