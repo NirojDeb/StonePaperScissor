@@ -34,11 +34,13 @@
 					</div>
 					
 <div class="sidebar lg:hidden" style="right:0px;top:0px;" id="rightMenu">
-<button class="close-button">StonePaperScissor</button>
+<button class="close-button">
+	<img src="assets/logo.png" class="w-full md:w-4/5 z-50">
+</button>
 
   <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
-  <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
-	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Reviews</button></a>
+  <!-- <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
+	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Reviews</button></a> -->
 	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-users"></i> Team</button></a>
 	  <button id="navAction" class="side-button-partner mx-2 lg:mx-0 hover:underline bg-white text-gray-800
 						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank" class="no-underline hover:text-gray-800 hover:text-underline">
@@ -318,7 +320,7 @@
 
 				<div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
 
-					<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id, index) in companyDetail.team" v-bind:key="id">
+					<div class="rounded overflow-hidden shadow-lg m-4 p-8" v-for="(profile, id) in companyDetail.team" v-bind:key="id">
 							<img v-if="profile.name === 'Aniket Dogra'"
 							class="rounded-full w-40 h-40"
 							alt="@/assets/team_photos/aniket.jpg"
@@ -594,8 +596,8 @@ closeRightMenu() {
 {
 	height:100%;
 	width:250px;
-    background: linear-gradient(to right, #16cf73 30%, #4a4acc 100%);
-			position:fixed!important;
+    background: linear-gradient(to right, #16cf73 30%, #16cf73 100%);
+	position:fixed!important;
 	overflow:auto;
 	z-index: 31;
 	animation: animateright .4s;
