@@ -10,8 +10,6 @@
 							{{companyDetail.companyDetail.name}}
 						</a>
 					</div>
-
-
 					<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
 						<ul class="list-reset lg:flex justify-end flex-1 items-center">
 							<li>
@@ -23,6 +21,12 @@
 								<a @click="openPopup()" class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-1" href="#">
 									<i class="fa fa-money"></i>Green Cash
 								</a>
+							</li>
+							<li>
+								<!-- <a @click="openForm()" class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-1" href="#">
+									<i class="fa fa-money"></i>Travel
+								</a> -->
+								<router-link to = "/pangot">Travel</router-link>
 							</li>
 						</ul>
 						<button id="navAction" class="mx-2 lg:mx-0 hover:underline bg-white font-bold text-gray-800
@@ -43,6 +47,12 @@
   <a href="#" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></a>
   <!-- <a href="#" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> Contact</button></a>
 	<a href="#" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Reviews</button></a> -->
+	<li>
+								<!-- <a @click="openForm()" class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-1" href="#">
+									<i class="fa fa-money"></i>Travel
+								</a> -->
+								<router-link to = "/pangot" class="algerian inline-block text-white no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-1"><i class="fa fa-money"></i></router-link>
+							</li>
 	<a href="#" class="no-underline" @click="openPopup()"><button class="side-button"><i class="fas fa-users"></i> Green Cash</button></a>
 	  <button id="navAction" class="side-button-partner mx-2 lg:mx-0 hover:underline bg-white text-gray-800
 						font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank" class="no-underline hover:text-gray-800 hover:text-underline">
@@ -70,7 +80,7 @@
 			</div></div>
 		<!--Hero-->
 		<div @click="closeRightMenu(), closePopup()" id="full">
-		<div class="pt-24 gradient h-screen">
+		<div class="flex gradient min-h-screen pt-24">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 				<!-- <span class="span1"></span><span class="span4"></span><span class="span3"></span><span class="span2"></span><span class="span5"></span> -->
 				<!--Left Col-->
@@ -86,15 +96,14 @@
 					</p>
 					<button class="z-50 mx-auto lg:mx-0 hover:underline bg-white text-gray-800
 				font-bold rounded-full my-6 py-4 px-8 shadow-lg" @click="openCheckoutPage()">
-						Add to Cart
+						 Buy
 					</button>
-
+						
 				</div>
 				<!--Right Col-->
-				<div class="w-full md:w-3/5 py-6 text-center">
+<div class="w-full md:w-3/5 py-6 text-center">
 					<img class="w-full md:w-4/5 z-50" src="@/assets/products/greenbox.png">
 				</div>
-
 			</div>
 
 		</div>
@@ -509,7 +518,7 @@ import companyDetail from '../../../assets/json/company.json';
 export default {
   name: 'HimalayasHeroHondaPage',
   components: {
-    DesktopHeader: () => import('@/components/desktop-header.vue'),
+	DesktopHeader: () => import('@/components/desktop-header.vue'),
   },
   data() {
     return {
@@ -569,7 +578,7 @@ export default {
 		// checksum_lib.genchecksum(paytmParams, "#bd#n6YvrGGrMvkD", function(err, checksum){
 		// 	console.log('checksum is: '+checksum);
 		// });
-		window.location.href = 'https://rzp.io/l/bOQRt9R';
+		window.location.href = 'https://www.instamojo.com/aditya_kumar_/green-box/';
 	},
 
 	openPopup() {
@@ -582,7 +591,9 @@ export default {
 	document.getElementById("popup").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
 	document.getElementById("full").setAttribute("style", "opacity: 1; transition: 1s;");
 	},
-
+	openForm() {
+		window.location.href = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYkHHotitOUdgS9dmBXjeYKNdUIV2fp2BOvzwBDpPS2Q_jtQ/viewform?embedded=true" width="640" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
+	},
 	openRightMenu() {
 	document.getElementById("rightMenu").setAttribute("style", "right: 0px; top: 0px; transition: 1.5s;");
 	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");

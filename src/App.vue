@@ -26,13 +26,12 @@ import {
 export default {
   name: 'App',
   components: {
-    DeviceView: () =>
-    // if (isMobileOnly) {
-    //   return import('./Mobile.vue');
-    // }
-    // return import('@/views/error.vue');
-       import('@/views/desktop/campaigns/himalayas-hero-honda-2019.vue')
-    ,
+    DeviceView: () =>{
+    if (isMobileOnly) {
+      return import('./Mobile.vue');
+    }
+    return import('./Desktop.vue');
+    }
   },
   data() {
     return {
