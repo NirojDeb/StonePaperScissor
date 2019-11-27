@@ -22,6 +22,14 @@ import {
 } from 'mobile-device-detect';
 // import { defaultCoreCipherList } from 'constants';
 // import { isMobileOnly } from 'mobile-device-detect';
+const getAppVersion = () => {
+  const url = `/package.json?c=${Date.now()}`;
+  const headers = {
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+  };
+
+  return fetch(url, { headers }).then(response => response.json());
+};
 
 export default {
   name: 'App',
@@ -53,6 +61,20 @@ export default {
     },
   },
   mounted() {
+    const handleScreenFocus = () => {
+      if (isIOS && document.visibilityState === 'visible') {
+        const currentVersion = global.localStorage.getItem('appVersion');
+        getAppVersion()
+          .then((data) => {
+            if (data.version !== currentVersion) {
+              global.localStorage.setItem('appVersion', data.version);
+              this.showRefreshUI({});
+            }
+          });
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleScreenFocus);
     // ---
     // Custom code to let user update the app
     // when a new service worker is available
@@ -64,19 +86,33 @@ export default {
         if (this.refreshing) return;
         this.refreshing = true;
         // Here the actual reload of the page occurs
-        window.location.reload();
+        window.location.reload(true);
       });
     }
+    // ---
+    // Custom code to let user update the app
+    // when a new service worker is available
+    // ---
+    // document.addEventListener('swUpdated', this.showRefreshUI, { once: true });
 
-    this.$cordova.on('deviceready', () => {
-      this.platform = cordova.platformId;
-      this.updateBiometricStatus();
-      this.cordovaInit();
-      this.setUpFirebase();
-      this.checkRootedDevice();
-      // this.checkSSLPinning();
-      this.requestLocationAccuracy();
-    });
+    // if (navigator.serviceWorker) {
+    //   navigator.serviceWorker.addEventListener('controllerchange', () => {
+    //     if (this.refreshing) return;
+    //     this.refreshing = true;
+    //     // Here the actual reload of the page occurs
+    //     window.location.reload();
+    //   });
+    // }
+
+    // this.$cordova.on('deviceready', () => {
+    //   this.platform = cordova.platformId;
+    //   this.updateBiometricStatus();
+    //   this.cordovaInit();
+    //   this.setUpFirebase();
+    //   this.checkRootedDevice();
+    //   // this.checkSSLPinning();
+    //   this.requestLocationAccuracy();
+    // });
   },
   methods: {
     ...mapActions(['biometricLogin', 'updateBiometricStatus']),
@@ -88,6 +124,7 @@ export default {
       this.updateExists = true;
     },
     refreshApp() {
+      window.location.reload(true);
       this.updateExists = false;
       if (!this.registration || !this.registration.waiting) return;
       // send message to SW to skip the waiting and activate the new SW
@@ -101,17 +138,17 @@ export default {
         });
       }
 
-      if (cordova.plugins.SecureStorage) {
-        window.plugins.secureStorage = new cordova.plugins.SecureStorage(
-          (() => {
-            console.log('gsocialGoKeychainStorage successfully initialized'); // eslint-disable-line
-          }),
-          ((error) => {
-            console.log(`Error in initalizing gsocialGoKeychainStorage ${error}`); // eslint-disable-line
-          }),
-          'gsocialGoKeychainStorage',
-        );
-      }
+      // if (cordova.plugins.SecureStorage) {
+      //   window.plugins.secureStorage = new cordova.plugins.SecureStorage(
+      //     (() => {
+      //       console.log('gsocialGoKeychainStorage successfully initialized'); // eslint-disable-line
+      //     }),
+      //     ((error) => {
+      //       console.log(`Error in initalizing gsocialGoKeychainStorage ${error}`); // eslint-disable-line
+      //     }),
+      //     'gsocialGoKeychainStorage',
+      //   );
+      // }
 
       this.biometricLogin();
     },
