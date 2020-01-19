@@ -1,6 +1,6 @@
 {
   "name": "StonePaperScissors",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -12,14 +12,18 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "axios": "^0.18.0",
+    "bootstrap": "^4.4.1",
     "countup.js": "^2.0.4",
     "crypto-js": "^3.1.9-1",
     "dayjs": "^1.8.16",
+    "firebase": "^7.6.1",
     "i": "^0.3.6",
+    "jquery": "^3.4.1",
     "lodash.debounce": "^4.0.8",
     "lodash.uniqby": "^4.7.0",
     "mobile-device-detect": "^0.2.3",
     "npm": "^6.11.3",
+    "popper.js": "^1.16.0",
     "puppeteer": "^1.20.0",
     "puppeteer-core": "^1.20.0",
     "register-service-worker": "^1.6.2",
@@ -31,6 +35,7 @@
     "vue-forage": "^1.1.1",
     "vue-mugen-scroll": "^0.2.5",
     "vue-router": "^3.1.3",
+    "vue-truncate-filter": "^1.1.7",
     "vuex": "^3.1.0",
     "vuex-router-sync": "^5.0.0"
   },
