@@ -650,7 +650,6 @@ width: 100%;
 		box-shadow: 0px 8px 8px -6px black;
 		transition: .6s;		
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 .logo

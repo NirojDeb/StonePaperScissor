@@ -446,6 +446,10 @@ export default {
 {
   display: block;
 }
+#nav-back
+{
+	display: none;
+}
 .formHead
 {
   justify-content: space-between;
@@ -491,7 +495,6 @@ width: 100%;
 		box-shadow: 0px 8px 8px -6px black;
 		transition: .6s;		
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 .logo
@@ -501,6 +504,7 @@ width: 100%;
 }
 .close-button h2
 {
+	padding: 0px 40px;
 	font-family: algerian;
 	font-size: 36px;
 	font-weight: bold;
