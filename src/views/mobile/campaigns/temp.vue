@@ -51,7 +51,7 @@
             </a>
             </button>
          </div>
-         <div class="sidebar lg:hidden" style="right:-250px;top:0px;" id="rightMenu">
+         <div class="sidebar lg:hidden right-0 top-0" :class="{ 'menu-open' : menuOpen}">
             	<h2 class="border-b border-white flex font-serif h-16 items-center justify-center w-full">Stone Paper Scissor</h2>
             <div class="flex flex-col">
                <router-link to="/home" class="no-underline"><button class="font-bold font-serif px-4 py-4 text-white cursor-pointer"><i class="fa fa-home"></i> Home</button></router-link>
@@ -99,6 +99,7 @@ export default {
     return {
      companyDetail,
      greenCash : false,
+     menuOpen : true,
     };
   },
   methods: {
@@ -106,12 +107,12 @@ export default {
 		window.location.href = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYkHHotitOUdgS9dmBXjeYKNdUIV2fp2BOvzwBDpPS2Q_jtQ/viewform?embedded=true" width="640" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
 	},
 	openRightMenu() {
-	document.getElementById("rightMenu").setAttribute("style", "right: 0px; top: 0px; transition: 1.5s;");
+      this.menuOpen = !this.menuOpen;
 	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
 },
 
 closeRightMenu() {
-  document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
+      this.menuOpen = !this.menuOpen;
 	document.getElementById("full").setAttribute("style", "opacity: 1; position: relative; right: 0px; transition: 1.5s;");
 },
   },
@@ -119,6 +120,11 @@ closeRightMenu() {
 </script>
 
 <style scoped>
+.menu-open {
+   right: -250px;
+   top: 0px;
+   transition: 1s;
+}
 .gradient {
     background: linear-gradient(90deg, #33d574 0%, #28b0c5 100%);
 }

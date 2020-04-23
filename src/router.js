@@ -11,10 +11,19 @@ Vue.use(Router);
 
 /* Auth Pages */
 const LoginPage = () => {
-    if (isMobileOnly) {
-        return import ('@/views/mobile/auth-pages/login.vue');
-    }
-    return import ('@/views/desktop/auth-pages/login.vue');
+    return import ('@/views/login.vue');
+};
+
+const BlogPage = () => {
+    return import ('@/views/blogs.vue');
+};
+
+const AddPostPage = () => {
+    return import ('@/views/add-post.vue');
+};
+
+const FullBlogPage = () => {
+    return import ('@/views/blog.vue');
 };
 
 const CampaignPage = () => {
@@ -220,6 +229,26 @@ const routes = [
         path: '/about',
         name: 'AboutPage',
         component: AboutPage,
+    },
+    {
+        path: '/login',
+        name: 'LoginPage',
+        component: LoginPage,
+    },
+    {
+        path: '/blog',
+        name: 'BlogPage',
+        component: BlogPage,
+    },
+    {
+        path: '/full-blog-:id',
+        name: 'FullBlogPage',
+        component: FullBlogPage,
+    },
+    {
+        path: '/add-post',
+        name: 'AddPostPage',
+        component: AddPostPage,
     },
     {
         path: '/home',

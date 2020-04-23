@@ -1,47 +1,7 @@
 <template>
-    <section>
-        <div class="sidebar lg:hidden" style="right:-250px;top:0px;" id="rightMenu">
-            <button class="close-button px-4 md:py-1 py-2">
-                <img src="../../../assets/logo-white.png" class="h-10 md:h-16">
-            <h2>SPS</h2>
-            </button>
-
-            <router-link to="/" class="no-underline"><button class="side-button"><i class="fa fa-home"></i> Home</button></router-link>
-            <router-link to="" class="no-underline"><button class="side-button"><i class="far fa-address-card"></i> About Us</button></router-link>
-            <router-link to="" class="no-underline"><button class="side-button"><i class="fas fa-comments"></i> Product</button></router-link>
-            <router-link to="" class="no-underline"><button class="side-button"><i class="fas fa-blog"></i> Blog</button></router-link>
-            <router-link to="" @click="openForm()" class="no-underline"><button class="side-button"><i class="fa fa-bus"></i> Travel</button></router-link>
-            <router-link to="" class="no-underline" @click="openPopup()"><button class="side-button"><i class="fas fa-money-bill"></i> Green Cash</button></router-link>
-            <button id="navAction" class="side-button-partner mx-2 lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-10 shadow opacity-75">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKSL_eE924omenVL8D1pz8uF-2f6t02NZetbIQoJ99rAN8aw/viewform" target="_blank" class="no-underline hover:text-gray-800 hover:text-underline">
-                    <i class="fa fa-handshake"></i>	Partner With Us
-                </a>
-            </button>
-        </div>
-        <div class="bg-white flex items-center justify-between md:px-8 px-4 lg:py-5 py-3 relative z-10 header">
-            <div class="flex items-center">
-                <img src="../../../assets/logo-about.png" class="sm:h-12 h-8" />
-                <h1 class="font-bolder font-sans sm:text-3xl text-2xl text-green pl-4">Stone Paper Scissor</h1>
-            </div>
-            <div class="lg:flex hidden items-center">
-                <p class="font-sans font-medium text-green pr-2 pl-6">Home</p>
-                <div class="flex flex-col items-center ml-6 relative">
-                    <p class="font-medium font-sans px-2 text-green">About</p>
-                    <span class="absolute bg-green-light h-2 w-full" style="bottom: -35px;"></span>
-                </div>
-                <p class="font-sans font-medium text-green pl-6 pr-2">Products</p>
-                <p class="font-sans font-medium text-green pl-6 pr-2">Blog</p>
-                <p class="font-sans font-medium text-white bg-green ml-6 py-1 px-2">Partner With Us</p>
-
-            </div>
-            <button id="nav-toggle" class="lg:hidden block sm:px-3 sm:py-2 px-2 py-1 border rounded text-green-dark border-green-dark hover:text-green hover:border-green appearance-none focus:outline-none z-20" @click="openRightMenu()">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-        </div>
-    <section @click="closeRightMenu()">
+    <section class="relative">
+        <Head />
+    <section @click="closeRightMenu()" class="pb-16">
         <div class="flex h-auto items-center relative w-auto">
             <div class="absolute font-sans w-1/2 text-left ml-10">
                 <h1 class="text-green font-big">Let's save the</h1>
@@ -70,13 +30,20 @@
             </div>
         </div>
         </section>
+        <section>
+          <div class="absolute border-grey-dark border-t bottom-0 flex gradient items-center px-16 py-2 w-full">
+            <p class="text-sm mx-auto text-white font-thin">&copy; Copyright 2020, Stone Paper Scissors. All Rights Reserved</p>
+          </div>
+        </section>
     </section>
 </template>
 <script>
+import Head from '../../mobile/campaigns/head.vue';
 export default {
     name: 'AboutPage',
     data() {
     },
+    components: { Head },
     methods: {
         	openPopup() {
 	document.getElementById("popup").setAttribute("style", "display:block; transition: 1s;");
@@ -466,5 +433,8 @@ width: 100%;
 		width: 40px;
 	}
 	
+}
+.gradient {
+  background: linear-gradient(90deg, #33d574 0%, #28b0c5 100%);
 }
 </style>

@@ -3,6 +3,15 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    extend: {
+      gridTemplateRows: {
+        // Simple 8 row grid
+      '8': 'repeat(8, minmax(0, 1fr))',
+        
+        // Complex site-specific row configuration
+      'layout': '200px minmax(900px, 1fr) 100px',
+      }
+    },
     colors: {
       transparent: 'transparent',
 
@@ -25,15 +34,15 @@ module.exports = {
         900: '#be4b9a',
       },
       gray: {
-        100: '#f7fafc',
-        200: '#edf2f7',
-        300: '#e2e8f0',
-        400: '#cbd5e0',
-        500: '#a0aec0',
-        600: '#718096',
-        700: '#4a5568',
-        800: '#2d3748',
-        900: '#1a202c',
+        100: '#f5f5f5',
+        200: '#eeeeee',
+        300: '#e0e0e0',
+        400: '#bdbdbd',
+        500: '#9e9e9e',
+        600: '#757575',
+        700: '#616161',
+        800: '#424242',
+        900: '#212121',
       },
       red: {
         100: '#fff5f5',
@@ -100,6 +109,17 @@ module.exports = {
         700: '#2b6cb0',
         800: '#2c5282',
         900: '#2a4365',
+        1000: '#0094ff',
+        1100: '#017bd4',
+        text: '#0747A7',
+        admin: '#DAE4F6',
+        thead: '#FAFAFB',
+        filter: '#F6F7F9',
+        dashboared: '#F5F6FA',
+        filteroutline: '#E2E2EA',
+        filtertext: '#696974',
+        dropdownbgc: 'F2F7FF',
+        dropdowntext: '44444F',
       },
       indigo: {
         100: '#ebf4ff',
@@ -122,6 +142,8 @@ module.exports = {
         700: '#6b46c1',
         800: '#553c9a',
         900: '#44337a',
+        text: '#AF5DDF',
+        upload: '#F7EEFB',
       },
       pink: {
         100: '#fff5f7',
@@ -286,12 +308,14 @@ module.exports = {
       '5/6': '83.33333%',
       full: '100%',
       screen: '100vw',
+      semi: '90vw',
     }),
     height: theme => ({
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      semi: '50vh',
     }),
     minWidth: {
       0: '0',
@@ -351,6 +375,7 @@ module.exports = {
       30: 30,
       40: 40,
       50: 50,
+      neg: -10,
     },
     opacity: {
       0: '0',
@@ -455,7 +480,29 @@ module.exports = {
     wordBreak: ['responsive'],
     width: ['responsive'],
     zIndex: ['responsive'],
+    borderWidth: ['responsive', 'last', 'hover', 'focus'],
+    borderRadius: ['responsive', 'last', 'hover', 'focus'],
+    gridTemplateRows: ['responsive', 'hover', 'focus'],
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+    const newUtilities = {
+      '.rotate-0': {
+        transform: 'rotate(0deg)',
+      },
+      '.rotate-90': {
+        transform: 'rotate(90deg)',
+      },
+      '.rotate-180': {
+        transform: 'rotate(180deg)',
+      },
+      '.rotate-270': {
+        transform: 'rotate(270deg)',
+      },
+    };
+
+    addUtilities(newUtilities, ['responsive', 'hover']);
+  },
+],
 };

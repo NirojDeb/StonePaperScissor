@@ -79,7 +79,7 @@
 				<input type="text" size="20" name="email" placeholder="Enter Email..."><button>Subscribe</button>
 			</div></div>
 		<!--Hero-->
-		<div @click="closeRightMenu(), closePopup()" id="full">
+		<div @click="closeRightMenu()" id="full">
 		<div class="flex gradient min-h-screen pt-24">
 			<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 				<!-- <span class="span1"></span><span class="span4"></span><span class="span3"></span><span class="span2"></span><span class="span5"></span> -->
@@ -586,11 +586,6 @@ export default {
 	document.getElementById("full").setAttribute("style", "opacity: 0.5; transition: 1s;");
   document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
 	},
-
-	closePopup() {
-	document.getElementById("popup").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
-	document.getElementById("full").setAttribute("style", "opacity: 1; transition: 1s;");
-	},
 	openForm() {
 		window.location.href = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYkHHotitOUdgS9dmBXjeYKNdUIV2fp2BOvzwBDpPS2Q_jtQ/viewform?embedded=true" width="640" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
 	},
@@ -704,7 +699,7 @@ width: 100%;
     z-index: 33;
     box-sizing: border-box;
     background-color: #0000007a;
-		display: none;
+		// display: none;
 		box-shadow: 0px 0px 30px 0px black;
 		border-radius: 20px 0px 20px 0px;
 }
@@ -773,7 +768,7 @@ width: 100%;
     z-index: 33;
     box-sizing: border-box;
     background-color: #0000007a;
-		display: none;
+		// display: none;
 }
 .head {
     position: relative;
@@ -830,7 +825,7 @@ width: 100%;
     z-index: 33;
     box-sizing: border-box;
     background-color: #0000007a;
-		display: none;
+		// display: none;
 }
 .head {
     position: relative;
@@ -888,7 +883,7 @@ width: 100%;
     z-index: 33;
     box-sizing: border-box;
     background-color: #0000007a;
-		display: none;
+		// display: none;
 		box-shadow: 0px 0px 15px 0px black;
 }
 .head {
