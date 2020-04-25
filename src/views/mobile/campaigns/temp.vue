@@ -20,7 +20,7 @@
                </h1>
             </div>
          <div class="lg:flex items-center hidden">
-            
+
                   <router-link to="/home"><p class="px-3 border-r border-white text-white font-bold">
                   Home
                   </p></router-link>
@@ -97,24 +97,24 @@ export default {
 
   data() {
     return {
-     companyDetail,
-     greenCash : false,
-     menuOpen : true,
+      companyDetail,
+      greenCash: false,
+      menuOpen: true,
     };
   },
   methods: {
-	openForm() {
-		window.location.href = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYkHHotitOUdgS9dmBXjeYKNdUIV2fp2BOvzwBDpPS2Q_jtQ/viewform?embedded=true" width="640" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
-	},
-	openRightMenu() {
+    openForm() {
+      window.location.href = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYkHHotitOUdgS9dmBXjeYKNdUIV2fp2BOvzwBDpPS2Q_jtQ/viewform?embedded=true" width="640" height="1089" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>';
+    },
+    openRightMenu() {
       this.menuOpen = !this.menuOpen;
-	document.getElementById("full").setAttribute("style", "opacity: 0.5; position: relative; right: 250px; transition: 1.5s;");
-},
+      document.getElementById('full').setAttribute('style', 'opacity: 0.5; position: relative; right: 250px; transition: 1.5s;');
+    },
 
-closeRightMenu() {
+    closeRightMenu() {
       this.menuOpen = !this.menuOpen;
-	document.getElementById("full").setAttribute("style", "opacity: 1; position: relative; right: 0px; transition: 1.5s;");
-},
+      document.getElementById('full').setAttribute('style', 'opacity: 1; position: relative; right: 0px; transition: 1.5s;');
+    },
   },
 };
 </script>
@@ -163,7 +163,7 @@ width: 100%;
     background-color: #33d575;
     font-family: algerian;
 		box-shadow: 0px 0px 40px 0px #0000007d;
-		transition: .6s;		
+		transition: .6s;
     display: flex;
     align-items: center;
 }
@@ -236,7 +236,7 @@ width: 100%;
 }
 @media only screen and (max-width: 991px)
 {
-    
+
     .font-big {
         font-size: 40px;
     }
@@ -448,7 +448,7 @@ width: 100%;
 		height: 50px;
 		width: 50px;
 	}
-	
+
 }
 @media screen and (max-width: 360px) {
 	.small-font
@@ -460,6 +460,6 @@ width: 100%;
 		height: 40px;
 		width: 40px;
 	}
-	
+
 }
 </style>
