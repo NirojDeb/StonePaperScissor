@@ -1,22 +1,26 @@
 <template>
     <section class="auth-page bg-white h-screen">
-    <div class="flex flex-col h-screen container justify-center mx-auto">
-        
-
-      <form class="mx-auto w-2/3 md:w-2/5" method="post" name="validation" role="form" @submit.prevent="login(user)">
-               <div class="mx-auto w-1/4">
-					<img class="" src="@/assets/products/greenbox.png">
-				</div>
-        <h1 class="font-bold text-2xl sm:text-3xl text-gred mb-4 text-center">
-               Stone Paper Scissor
-               </h1>
-        <div class="mb-4">
-          <label class="form-input-label" for="ohrid">
-            Email Id
-          </label>
-          <input id="ohrid" class="form-input-text w-full" type="number" placeholder="Enter Your Email...">
-        </div>
-
+      <div class="flex flex-col h-screen container justify-center mx-auto">
+        <form class="mx-auto w-2/3 md:w-2/5" method="post" name="validation" role="form"
+          @submit.prevent="login(user)">
+          <div class="mx-auto w-1/4">
+            <img class="" src="@/assets/products/greenbox.png">
+          </div>
+          <h1 class="font-bold text-2xl sm:text-3xl text-gred mb-4 text-center">
+            Stone Paper Scissor
+          </h1>
+          <div class="mb-4">
+            <label class="form-input-label" for="email">
+              Email Id
+            </label>
+            <input
+              id="email"
+              class="form-input-text w-full"
+              type="email"
+              placeholder="Enter Your Email..."
+              v-model="user.email"
+              >
+          </div>
         <div class="mb-4">
           <label class="form-input-label" for="password">
             Password
@@ -26,8 +30,8 @@
             class="form-input-text w-full"
             type="password"
             placeholder="Enter Password Here..."
+            v-model="user.password"
           >
-          <!-- <p class="text-red text-xs italic">Please choose a password.</p> -->
         </div>
 
         <button
@@ -41,8 +45,24 @@
 </template>
 <script>
 export default {
-    name: 'LoginPage'
-}
+  name: 'LoginPage',
+  data() {
+    return {
+      user: {
+        email: 'spsteam@gmail.com',
+        password: '',
+      },
+    };
+  },
+  methods: {
+    login(user) {
+      console.log(`user is: ${JSON.stringify(user)}`);
+      if (user.email === 'spsteam@gmail.com' && user.password === 'teamsps') {
+        window.location.href = '#/add-post';
+      }
+    },
+  },
+};
 </script>
 <style scoped>
 .form-input-text {

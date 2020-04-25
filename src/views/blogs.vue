@@ -48,7 +48,7 @@
       </div>
         </div>
         <section class="px-4 flex flex-wrap justify-around">
-          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border rounded border-grey-dark shadow-md bg-white"> 
+          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border rounded border-grey-dark shadow-md bg-white">
           <router-link :to="{ name: 'FullBlogPage', params: {id:article.id}}">
           <div class="h-32 w-full bg-white rounded-t-lg">
 					<img class="h-32 w-auto mx-auto block py-2" src="@/assets/products/greenbox.png">
@@ -73,14 +73,18 @@
             <i class="fa-eye far text-sm"></i>
               {{article.views}}
             </p>
-            {{article.date}} | Posted by : <span class="font-bold text-sm text-green-dark">{{article.author}}</span>
-          </div> 
+            {{$date(article.date).format('MMM D YYYY')}}
+            <br>
+            <span class="font-bold text-sm text-green-dark">{{article.author}}</span>
+          </div>
           </router-link>
           </div>
         </section>
         <section>
           <div class="bg-white py-2 px-16 flex items-center border-t border-grey-dark">
-            <p class="text-sm mx-auto font-thin">&copy; Copyright 2020, Stone Paper Scissors. All Rights Reserved</p>
+            <p class="text-sm mx-auto font-thin">
+              &copy; Copyright 2020, Stone Paper Scissors. All Rights Reserved
+            </p>
           </div>
         </section>
 		</section>
@@ -88,26 +92,27 @@
 </template>
 
 <script>
+import dayjs from 'dayjs';
 import Head from './mobile/campaigns/head.vue';
 import allarticles from './all-articles/articles.json';
 
 export default {
   name: 'BlogPage',
-  components: { Head },	  
+  components: { Head },
   data() {
     return {
       sortBy: false,
-    sortByDefault: 'Default',
-    articles : allarticles,
-	}
+      sortByDefault: 'Default',
+      articles: allarticles,
+    };
   },
   methods: {
-    
-	closeRightMenu() {
-	document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
-	},
-  }
-}
+
+    closeRightMenu() {
+      document.getElementById('rightMenu').setAttribute('style', 'right: -250px; top:0px;');
+    },
+  },
+};
 </script>
 <style>
 .gradient {
