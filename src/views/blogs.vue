@@ -73,7 +73,7 @@
             <i class="fa-eye far text-sm"></i>
               {{article.views}}
             </p> -->
-            <p class="text-grey-light">{{article.date}}</p> <p class="text-grey-light">Posted by : <span class="font-bold text-sm text-white">{{article.author}}</span></p>
+            <p class="text-grey-light">{{$date(article.date).format('MMM D YYYY')}}</p> <p class="text-grey-light">Posted by : <span class="font-bold text-sm text-white">{{article.author}}</span></p>
           </div> 
           </router-link>
           </div>
@@ -88,26 +88,27 @@
 </template>
 
 <script>
+import dayjs from 'dayjs';
 import Head from './mobile/campaigns/head.vue';
 import allarticles from './all-articles/articles.json';
 
 export default {
   name: 'BlogPage',
-  components: { Head },	  
+  components: { Head },
   data() {
     return {
       sortBy: false,
-    sortByDefault: 'Default',
-    articles : allarticles,
-	}
+      sortByDefault: 'Default',
+      articles: allarticles,
+    };
   },
   methods: {
-    
-	closeRightMenu() {
-	document.getElementById("rightMenu").setAttribute("style", "right: -250px; top:0px;");
-	},
-  }
-}
+
+    closeRightMenu() {
+      document.getElementById('rightMenu').setAttribute('style', 'right: -250px; top:0px;');
+    },
+  },
+};
 </script>
 <style>
 .gradient {
