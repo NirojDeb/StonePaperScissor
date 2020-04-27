@@ -177,6 +177,7 @@ module.exports = {
       48: '12rem',
       56: '14rem',
       64: '16rem',
+      "card": '20rem',
     },
     screens: {
       sm: '640px',
