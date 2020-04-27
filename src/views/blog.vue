@@ -3,20 +3,20 @@
     <Head />
     <div @click="closeRightMenu()" class="md:mx-auto pt-10 py-16 md:w-2/3 mx-12">
       <div class="w-full border-b border-grey-dark pb-2">
-        <h1 @click="run()" class="text-blue-darker text-center">
+        <h1 @click="run()" class="text-blue-darker text-2xl sm:text-4xl text-center">
           {{article[id].title}}
         </h1>
         <div class="border-b border-grey pb-2 pt-1 text-blue-darker text-center text-xs">
           <span>
-            {{article[id].date}}
+            {{$date(article[id].date).format('MMM D YYYY')}} |
           </span>
-          <div class="relative inline-block px-1">
+          <div class="relative inline-block">
             <a href="/dashboard/good-read/profile">
               <b class="text-brand-400">{{article[id].author}}</b>
             </a>
           </div>
         </div>
-        <div v-html="article[id].description" class="break-words pt-1 text-lg whitespace-pre-line">
+        <div v-html="article[id].description" class="break-words pt-1 text-sm text-justify sm:text-lg whitespace-pre-line">
         <!-- {{$route.params.description}} -->
         </div>
       </div>
@@ -67,5 +67,8 @@ export default {
 <style>
 .gradient {
   background: linear-gradient(90deg, #33d574 0%, #28b0c5 100%);
+}
+.ql-syntax {
+  overflow: auto;
 }
 </style>

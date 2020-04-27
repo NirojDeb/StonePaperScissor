@@ -48,7 +48,7 @@
       </div>
         </div>
         <section class="px-4 text-justify flex flex-wrap justify-around">
-          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border rounded border-grey shadow-md gradient"> 
+          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border rounded border-grey shadow-md overflow-hidden card-height gradient"> 
           <router-link :to="{ name: 'FullBlogPage', params: {id:article.id}}">
           <div class="h-32 w-full gradient rounded-t-lg">
 					<img class="h-32 w-auto mx-auto block py-2" src="@/assets/products/greenbox.png">
@@ -56,7 +56,7 @@
           <h1 class="text-lg font-bold p-2 border-t border-b border-grey-light text-grey-lighter font-serif">
             {{article.title}}
           </h1>
-          <p v-html="article.description" class="text-sm p-2 mb-12 break-words text-grey-lighter">
+          <p v-html="article.description" class="text-sm p-2 mb-12 break-words card-desc-height text-grey-lighter">
           </p>
           <div class="h-10 text-xs absolute bottom-0 gradient rounded-b-lg flex w-full items-center border-t border-grey-light justify-between px-3">
             <!-- <div class="flex items-center w-2/3">
@@ -113,5 +113,12 @@ export default {
 <style>
 .gradient {
   background: linear-gradient(90deg, #33d574 0%, #28b0c5 100%);
+}
+.card-height {
+  max-height: 330px;
+}
+
+.card-desc-height {
+  max-height: 90px;
 }
 </style>
