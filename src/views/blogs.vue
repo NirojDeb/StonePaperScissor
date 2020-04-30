@@ -6,7 +6,7 @@
         <div class="md:w-1/2 w-full mb-3 md:mb-0 flex items-center">
           <button
             @click="sortBy = !sortBy"
-            class="rounded border border-grey bg-white flex focus:outline-none font-bold items-center justify-between pl-3 px-2 text-green text-sm mr-2 md:w-1/2 w-full relative"
+            class="rounded border border-grey bg-white flex focus:outline-none font-bold items-center justify-between pl-3 px-2 text-grey-darker text-sm mr-2 md:w-1/2 w-full relative"
 			:class="{ 'bg-blue-700 text-white': sortBy }"
           >
             <p class="pt-px ">
@@ -29,7 +29,7 @@
           </button>
           <button
             @click="sortBy = !sortBy"
-           class="rounded border border-grey bg-white flex focus:outline-none font-bold items-center justify-between pl-3 px-2 ml-2 text-green text-sm md:w-1/2 w-full"
+           class="rounded border border-grey bg-white flex focus:outline-none font-bold items-center justify-between pl-3 px-2 ml-2 text-grey-darker text-sm md:w-1/2 w-full"
             :class="{ 'bg-blue-700 text-white': sortBy }"
           >
             <p class="pt-px ">
@@ -44,21 +44,22 @@
         <button class="focus:outline-none mr-3 pt-1">
           <img src="../assets/search-bar.svg" >
         </button>
-        <input id="search-file" placeholder="Search files or User" class="focus:outline-none placeholder-black w-full bg-white text-green">
+        <input id="search-file" placeholder="Search files or User" class="focus:outline-none placeholder-black w-full bg-white text-grey-darker ">
       </div>
         </div>
         <section class="px-4 text-justify flex flex-wrap justify-around">
-          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border rounded border-grey shadow-md overflow-hidden card-height gradient"> 
-          <router-link :to="{ name: 'FullBlogPage', params: {id:article.id}}">
-          <div class="h-32 w-full gradient rounded-t-lg">
-					<img class="h-32 w-auto mx-auto block py-2" src="@/assets/products/greenbox.png">
+          <div v-for="article in articles" :key="article.id" class="lg:w-1/4 sm:w-2/5 w-4/5 cursor-pointer mx-2 mb-6 relative border-2 rounded border-grey shadow-md overflow-hidden card-height bg-white"> 
+          
+          <div class="h-32 w-full rounded-t-lg">
+					<img class="h-32 w-full mx-auto block relative" src="@/assets/products/1.png">
+          <p class="bg-grey-dark text-grey-lighter px-2 py-1 rounded rounded-r-none top-0 right-0 mt-5 text-xs absolute">{{$date(article.date).format('MMM DD')}}</p>
           </div>
-          <h1 class="text-lg font-bold p-2 border-t border-b border-grey-light text-grey-lighter font-serif">
+          <h1 class="text-lg font-bold p-2 border-t border-b border-grey-light font-serif">
             {{article.title}}
           </h1>
-          <p v-html="article.description" class="text-sm p-2 mb-12 break-words card-desc-height text-grey-lighter">
+          <p v-html="article.description" class="text-sm p-2 mb-12 break-words card-desc-height">
           </p>
-          <div class="h-10 text-xs absolute bottom-0 gradient rounded-b-lg flex w-full items-center border-t border-grey-light justify-between px-3">
+          <div class="h-10 text-xs absolute bg-white bottom-0 rounded-b-lg flex w-full items-center border-t border-grey-light justify-between px-3">
             <!-- <div class="flex items-center w-2/3">
               <p class="mx-4 text-green">
                 <i class="fa-thumbs-up far text-sm"></i>
@@ -73,9 +74,8 @@
             <i class="fa-eye far text-sm"></i>
               {{article.views}}
             </p> -->
-            <p class="text-grey-light">{{$date(article.date).format('MMM D YYYY')}}</p> <p class="text-grey-light">Posted by : <span class="font-bold text-sm text-white">{{article.author}}</span></p>
+            <router-link :to="{ name: 'FullBlogPage', params: {id:article.id}}" class="px-3 py-1 gradient rounded border border-grey-dark text-white">Read More</router-link> <p class="font-semibold text-sm text-grey-darker font-sans">By <span class="">{{article.author}}</span></p>
           </div> 
-          </router-link>
           </div>
         </section>
         <section>

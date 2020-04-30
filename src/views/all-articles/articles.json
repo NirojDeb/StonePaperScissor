@@ -2,9 +2,9 @@
     "id": 1,
     "title": "Blog Title can be stretch to second line",
     "date": "02/09/2019",
-    "author": "nitin Arora",
+    "author": "Nitin Arora",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat.",
-    "icon": "@/assets/products/greenbox.png",
+    "icon": "https://www.serverless360.com/wp-content/uploads/2020/04/How-to-achieve-end-to-end-message-visibility-on-Serverless-Applications.png",
     "views": 0,
     "disabled": false
 }, {
@@ -20,7 +20,7 @@
     "id": 3,
     "title": "Blog Title can be stretch to second line",
     "date": "02/09/2019",
-    "author": "nitin Arora",
+    "author": "Nitin Arora",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat.",
     "icon": "@/assets/products/greenbox.png",
     "views": 0,

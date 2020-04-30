@@ -13,6 +13,7 @@
                         <label class="font-bold ml-px text-blue-darker underline">Post Title</label>
                         <input type="text" v-model="titleNew" class="bg-gray-200 border border-b-4 border-blue-darker mt-1 px-4 py-2 relative rounded shadow-lg text-blue-darker text-sm w-full" placeholder="Post Title..." />
                     </div>
+                    
     
                     <!-- <div class="my-5 relative"><input type="file" v-on:change="iconNew" class="mt-2 bg-transparent block border-b-2 border-gray-500 px-2 pb-0 pt-4 text-gray-500 text-lg w-full"><span class="highlight"></span> <span class="bar relative block w-full"></span>                                        <label class="label absolute font-bold label left-0 pointer-events-none text-blue-500 text-sm top-0 underline">Primary Image</label> </div> -->
     
